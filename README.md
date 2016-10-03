@@ -23,4 +23,7 @@ Things you may want to cover:
 
 * ...
 # Group Review Site
-Your app description, here.
+
+![Build Status](https://codeship.com/projects/6c866a60-6ba7-0134-54fc-2e8398cca30e/status?branch=master)
+![Code Climate](https://codeclimate.com/github.com/dkkahn10/group-project-reviews.png)
+![Coverage Status](https://coveralls.io/repos/github.com/dkkahn10/group-project-reviews/badge.png)

@@ -11,7 +11,7 @@ feature 'sign up' do
       fill_in 'Username', with: 'newUser'
       fill_in 'Password', with: 'password'
       fill_in 'Email', with: 'email@gmail.com'
-      fill_in 'Password Confirmation', with: 'password'
+      fill_in 'Confirm Password', with: 'password'
       click_button 'Sign Up'
 
 

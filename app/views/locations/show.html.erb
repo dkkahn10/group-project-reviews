@@ -3,3 +3,13 @@
   <li><%= @location.name_of_location %></li>
   <li><%= @location.description %></li>
 <ul>
+
+<div class="button">
+  <%= link_to "Add a Review", new_location_review_path(@location)%>
+</div>
+
+<h2>Reviews</h2>
+<% @reviews.each do |review| %>
+  <%= review.intimacy_rating %>
+  <%= review.reasoning %>
+<% end %>

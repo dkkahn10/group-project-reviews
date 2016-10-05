@@ -1,9 +1,7 @@
 require 'rails_helper'
-
 feature 'sign up' do
 
   context 'As an unauthenticated user, I want to sign up' do
-
     scenario 'user signs up successfully' do
 
       visit root_path
@@ -15,8 +13,8 @@ feature 'sign up' do
       click_button 'Sign up'
 
 
-      expect(page).to have_content("Welcome! You have signed up successfully.")
-      expect(page).to have_content("Sign Out")
+      expect(page).to have_content('Welcome! You have signed up successfully.')
+      expect(page).to have_content('Sign Out')
 
     end
 

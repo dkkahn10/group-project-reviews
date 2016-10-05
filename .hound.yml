@@ -1,6 +1,10 @@
+ruby:
+  confing_file: .rubocop.yml
+
 AllCops:
   Exclude:
-    - db/schema.rb
+    - 'db/schema.rb'
+    - config/initializers/devise.rb
   #DisplayCopNames: true
 
 AccessorMethodName:

@@ -13,19 +13,19 @@ feature "user can update/edit a location" do
         click_button "Edit"
 
         expect(page).to have_content "The Temple of Time"
-        expect(page).to have_content "Add A Review"
+        expect(page).to have_content "Review"
       end
       scenario "a user edits a page unsuccessfully" do
         visit new_location_path
         fill_in "Name of Location", with: "The Temple of Time"
         fill_in "Description", with: "A blast from the past!"
         click_button "Add Location"
-        click_button "Edit Location"
+        click_link "Edit Location"
         fill_in "Name of Location", with: ""
         click_button "Edit"
 
-        expect(page).to have_content "Description can't be blank"
-        expect(page).to_not have_content "Add A Review"
+        expect(page).to have_content "Name of location can't be blank"
+        expect(page).to_not have_content "Review"
       end
     end
   end

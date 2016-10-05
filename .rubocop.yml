@@ -5,7 +5,6 @@ inherit_from:
 AllCops:
   Exclude:
     - db/schema.rb
-  RunRailsCops: true
 
 Style/DocumentationMethod:
   RequireForNonPublicMethods: false

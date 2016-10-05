@@ -8,6 +8,10 @@
   <%= link_to "Add a Review", new_location_review_path(@location)%>
 </div>
 
+<div class="button">
+  <%= link_to "Edit Location", edit_location_path(@location)%>
+</div>
+
 <h2>Reviews</h2>
 <% @reviews.each do |review| %>
   <%= review.intimacy_rating %>

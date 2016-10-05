@@ -9,7 +9,7 @@ feature "users can add location" do
     visit new_location_path
     expect(page).to have_content "New Location Form"
 
-    fill_in 'Name of location', with: "the place"
+    fill_in 'Name of Location', with: "the place"
     fill_in 'Description', with: "was ok"
 
     click_button "Add Location"

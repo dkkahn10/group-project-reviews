@@ -1,0 +1,21 @@
+AllCops:
+  RunRailsCops: true
+
+Style/DocumentationMethod:
+  RequireForNonPublicMethods: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: when_needed
+  SupportedStyles:
+    - when_needed
+    - always
+
+Style/WhileUntilModifier:
+  MaxLineLength: 250
+
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+  ConsistentQuotesInMultiline: false

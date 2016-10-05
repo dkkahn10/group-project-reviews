@@ -1,9 +1,14 @@
 class UsersController < ApplicationController
+
   def index
-    @user = User.all
   end
 
   def show
-    @user = current_user
   end
+
+  def delete
+    user = User.find(params[:id])
+    sign_out user
+  end
+
 end

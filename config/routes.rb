@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-
-    resources :locations do 
-      resources :reviews, only: [:index, :new, :create]
-  end
-
   root "locations#index"
 
+  resources :locations do
+    resources :reviews, only: [:index, :create, :new]
+  end
 end

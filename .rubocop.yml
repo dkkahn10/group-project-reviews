@@ -1,0 +1,25 @@
+inherit_from:
+  - enabled.yml
+  - disabled.yml
+
+AllCops:
+  Exclude:
+    - db/schema.rb
+
+Style/DocumentationMethod:
+  RequireForNonPublicMethods: false
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: when_needed
+  SupportedStyles:
+    - when_needed
+    - always
+
+Style/LineLength:
+  Max: 201
+
+Style/StringLiterals:
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+  ConsistentQuotesInMultiline: false

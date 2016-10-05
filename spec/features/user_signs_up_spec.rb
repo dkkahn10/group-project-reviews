@@ -12,10 +12,8 @@ feature 'sign up' do
       fill_in 'Password confirmation', with: 'password'
       click_button 'Sign up'
 
-
       expect(page).to have_content('Welcome! You have signed up successfully.')
       expect(page).to have_content('Sign Out')
-
     end
 
     scenario 'user leaves required field blank' do
@@ -23,8 +21,8 @@ feature 'sign up' do
       click_link 'Sign Up'
       click_button 'Sign up'
 
-      expect(page).to have_content("can't be blank")
-      expect(page).to_not have_content("Sign Out")
+      expect(page).to have_content('can\'t be blank')
+      expect(page).to_not have_content('Sign Out')
     end
 
     scenario 'user password confirmation does not match' do

@@ -29,7 +29,7 @@ class LocationsController < ApplicationController
 
   def update
     @location = Location.find(params[:id])
-    
+
     if @location.update_attributes(location_params)
       flash[:notice] = "Location was succesfully edited."
       redirect_to location_path(@location)
@@ -40,8 +40,9 @@ class LocationsController < ApplicationController
   end
 
   def destroy
-    @location = Location.find(params[:id]).destroy
-
+    Location.find(params[:id]).destroy
+    flash[:notice] = "Location was deleted"
+    redirect_to locations_path
   end
 
   private

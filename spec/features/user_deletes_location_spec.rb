@@ -10,23 +10,10 @@ feature "user can delete a location" do
         click_button "Add Location"
         click_link "Edit Location"
         click_link "Delete"
-        click_button "Yes"
 
         expect(page).to_not have_content "The Temple of Time"
         expect(page).to have_content "All Locations"
-      end
-
-      scenario "a user deletes a page unsuccessfully" do
-        visit new_location_path
-        fill_in "Name of Location", with: "The Temple of Time"
-        fill_in "Description", with: "A blast from the past!"
-        click_button "Add Location"
-        click_link "Edit Location"
-        click_link "Delete"
-        click_button "No"
-
-        expect(page).to have_content "The Temple of Time"
-        expect(page).to_not have_content "Review"
+        expect(page).to have_content "Location was deleted"
       end
     end
   end

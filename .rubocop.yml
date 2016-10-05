@@ -11,4 +11,4 @@ Style/FrozenStringLiteralComment:
     - always
 
 Style/WhileUntilModifier:
-  MaxLineLength: 150
+  MaxLineLength: 250

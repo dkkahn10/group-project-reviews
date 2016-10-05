@@ -7,8 +7,7 @@ class UsersController < ApplicationController
   end
 
   def delete
-    user = User.find(params[:id])
-    sign_out user
+    sign_out_and_redirect(current_user)
   end
 
 end

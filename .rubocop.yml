@@ -1,8 +1,10 @@
 inherit_from:
   - enabled.yml
   - disabled.yml
-  
+
 AllCops:
+  Exclude:
+    - db/schema.rb
   RunRailsCops: true
 
 Style/DocumentationMethod:
@@ -14,8 +16,8 @@ Style/FrozenStringLiteralComment:
     - when_needed
     - always
 
-Style/WhileUntilModifier:
-  MaxLineLength: 250
+Style/LineLength:
+  Max: 201
 
 Style/StringLiterals:
   SupportedStyles:

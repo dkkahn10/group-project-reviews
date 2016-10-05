@@ -10,10 +10,7 @@ Style/DocumentationMethod:
   RequireForNonPublicMethods: false
 
 Style/FrozenStringLiteralComment:
-  EnforcedStyle: when_needed
-  SupportedStyles:
-    - when_needed
-    - always
+  EnforcedStyle: false
 
 Style/LineLength:
   Max: 201

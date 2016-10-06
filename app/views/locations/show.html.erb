@@ -16,4 +16,11 @@
 <% @reviews.each do |review| %>
   <%= review.intimacy_rating %>
   <%= review.reasoning %>
+
+  <div>
+      <% if review.user == current_user %>
+        <%= button_to "Edit Review", edit_location_review_path(@location, review) %>
+      <% end %>
+  </div>
+
 <% end %>

@@ -1,0 +1,13 @@
+<h1> Edit Profile Picture </h1>
+
+<%= form_for(@user) do |f| %>
+
+  <div class="field">
+    <%= f.label :profile_picture %>
+    <%= f.file_field :profile_picture %>
+  </div>
+
+  <div class="action">
+    <%= f.submit "Update Profile Picture" %>
+  </div>
+<% end %>

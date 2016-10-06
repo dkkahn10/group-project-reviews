@@ -1,4 +1,5 @@
 require 'rails_helper'
+
 feature 'profile picture' do
   let!(:user) { FactoryGirl.create(:user) }
 
@@ -7,7 +8,7 @@ feature 'profile picture' do
       visit root_path
       click_link 'Sign Up'
       fill_in 'Username', with: 'newUser'
-      attach_file :profile_photo, "#{Rails.root}/spec/support/images/photo.png"
+      attach_file :profile_picture, "#{Rails.root}/spec/support/images/photo.png"
       fill_in 'Email', with: 'email@gmail.com'
       fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'password'
@@ -21,7 +22,7 @@ feature 'profile picture' do
       visit root_path
       click_link 'Sign Up'
       fill_in 'Username', with: 'newUser'
-      attach_file :profile_photo, "photo"
+      attach_file :profile_picture, "photo"
       fill_in 'Email', with: 'email@gmail.com'
       fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'password'
@@ -41,7 +42,7 @@ feature 'profile picture' do
       click_button 'Log in'
       click_link 'Your Profile'
       clink_link 'Update Profile Picture'
-      attach_file :profile_photo, "#{Rails.root}/spec/support/images/photo.png"
+      attach_file :profile_picture, "#{Rails.root}/spec/support/images/photo.png"
       click_button 'Upload Profile Picture'
 
       expect(page).to have_content("Hooray! Your picture was uploaded!")
@@ -57,7 +58,7 @@ feature 'profile picture' do
       click_button 'Log in'
       click_link 'Your Profile'
       click_button 'Upload Profile Picture'
-      attach_file :profile_photo, "photo"
+      attach_file :profile_picture, "photo"
       click_button 'Upload Profile Picture'
 
       expect(page).to have_content("Your picture was not uploaded!")

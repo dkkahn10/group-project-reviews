@@ -1,8 +1,9 @@
 require 'rails_helper'
+
 feature "user can visit a show page with edit and delete options" do
   context "As a user I want to visit my show page" do
     let!(:user) { FactoryGirl.create(:user) }
-    
+
     scenario "So I can view my information" do
       visit root_path
       click_link 'Sign In'

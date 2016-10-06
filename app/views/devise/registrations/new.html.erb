@@ -26,6 +26,11 @@
     <%= f.text_field :username, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :profile_picture %>
+    <%= f.file_field :profile_picture %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

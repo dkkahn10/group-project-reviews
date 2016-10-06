@@ -7,8 +7,8 @@ feature 'sign up' do
       visit root_path
       click_link 'Sign Up'
       fill_in 'Username', with: 'newUser'
-      fill_in 'Password', with: 'password'
       fill_in 'Email', with: 'email@gmail.com'
+      fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'password'
       click_button 'Sign up'
 
@@ -29,8 +29,8 @@ feature 'sign up' do
       visit root_path
       click_link 'Sign Up'
       fill_in 'Username', with: 'newUser'
-      fill_in 'Password', with: 'password'
       fill_in 'Email', with: 'email@gmail.com'
+      fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'banana'
       click_button 'Sign up'
 

@@ -7,7 +7,6 @@ feature 'authenticated users can add reviews for the location' do
 
   scenario 'an authenticated user can navigate to the review form' do
     login_as(user)
-    # dumpling_king = Location.create(name_of_location: 'Dumpling King', description: 'Great place for a cheap date, but not a first date')
     visit location_path(location)
     click_link 'Add a Review'
 
@@ -38,7 +37,7 @@ feature 'authenticated users can add reviews for the location' do
     expect(page).to have_content 'Rating must be between 1 - 5'
   end
 
-  scenario 'an unauthenticated user cannot add a review'  do
+  scenario 'an unauthenticated user cannot add a review' do
     visit location_path(location)
     click_link 'Add a Review'
 

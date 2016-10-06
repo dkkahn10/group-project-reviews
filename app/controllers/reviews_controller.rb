@@ -9,12 +9,11 @@ class ReviewsController < ApplicationController
   end
 
   def create
-
     @review = Review.create(review_params)
     @review.location_id = params[:location_id]
     @location = @review.location
     @review.user = current_user
-    
+
     if @review.save
       redirect_to location_path(@location), notice: "Review added successfully"
     else
@@ -24,7 +23,7 @@ class ReviewsController < ApplicationController
   end
 
   private
-    def review_params
-      params.require(:review).permit(:intimacy_rating, :reasoning)
-    end
+  def review_params
+    params.require(:review).permit(:intimacy_rating, :reasoning)
+  end
 end

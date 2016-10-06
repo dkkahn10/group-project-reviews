@@ -6,6 +6,8 @@ require 'rails_helper'
 
 feature "users can add location" do
   scenario "authenticated user adds new location successfully" do
+    user = FactoryGirl.create(:user)
+    login_as(user)
     visit new_location_path
     expect(page).to have_content "New Location Form"
 

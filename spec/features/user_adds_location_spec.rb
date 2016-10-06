@@ -22,6 +22,8 @@ feature "users can add location" do
   end
 
   scenario "user does not provide proper information for a location" do
+    user = FactoryGirl.create(:user)
+    login_as(user)
     visit new_location_path
 
     click_button "Add Location"

@@ -10,9 +10,9 @@ feature "visitor sees a list of locations" do
 
     expect(page).to have_content "Rock Bottom"
     expect(page).to have_link "Dumpling King"
-    click_link "Add New Location"
-    expect(page).to have_content "New Location Form"
+    expect(page).to have_content "Add New Location"
   end
+
   scenario "clicks link and is taken to show page for given location" do
     dumpling_king = Location.create(name_of_location: 'Dumpling King', description: "Great place for a cheap date, but not a first date")
 

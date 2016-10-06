@@ -4,6 +4,8 @@ feature "user can update/edit a location" do
   context "a user visits a show page for a location they have created" do
     context "a user clicks on an edit button and is taken to a update form" do
       scenario "a user edits a page successfully" do
+        user = FactoryGirl.create(:user)
+        login_as(user)
         visit new_location_path
         fill_in "Name of Location", with: "The Temple of Time"
         fill_in "Description", with: "A blast from the past!"
@@ -16,6 +18,8 @@ feature "user can update/edit a location" do
         expect(page).to have_content "Review"
       end
       scenario "a user edits a page unsuccessfully" do
+        user = FactoryGirl.create(:user)
+        login_as(user)
         visit new_location_path
         fill_in "Name of Location", with: "The Temple of Time"
         fill_in "Description", with: "A blast from the past!"

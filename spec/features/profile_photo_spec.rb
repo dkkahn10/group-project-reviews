@@ -41,7 +41,7 @@ feature 'profile picture' do
       fill_in 'Password', with: user.password
       click_button 'Log in'
       click_link 'Your Profile'
-      attach_file "Profile picture", "#{Rails.root}/spec/support/images/photo.png"
+      attach_file 'Profile picture', '#{Rails.root}/spec/support/images/photo.png'
       click_button 'Update'
 
       expect(page).to have_css("img[src*='photo.png']")

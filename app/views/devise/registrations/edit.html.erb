@@ -32,8 +32,10 @@
   </div>
 
   <div class="field">
-    <%= f.label :profile_picture %>
-    <%= f.file_field :profile_picture, autofocus: true %>
+    <%= form_for @user, :html => {:multipart => true} do |f| %>
+      My Profile Picture
+      <%= f.file_field :profile_picture %>
+  <% end %>
   </div>
 
   <div class="actions">

@@ -4,7 +4,7 @@ class ProfilePictureUploader < CarrierWave::Uploader::Base
     include CarrierWave::MiniMagick
 
     # Choose what kind of storage to use for this uploader:
-    #storage :file
+    # storage :file
     storage :fog
     # Override the directory where uploaded files will be stored.
     # This is a sensible default for uploaders that are meant to be mounted:
@@ -17,7 +17,7 @@ class ProfilePictureUploader < CarrierWave::Uploader::Base
       # For Rails 3.1+ asset pipeline compatibility:
       # ActionController::Base.helpers.asset_path("fallback/" + [version_name, "default.png"].compact.join('_'))
 
-      #{}"/images/fallback/" + [version_name, "default.png"].compact.join('_')
+      # {}"/images/fallback/" + [version_name, "default.png"].compact.join('_')
       'default_profile_picture.png' #rails will look at 'app/assets/images/default_profile_picture.png'
     end
 
@@ -31,15 +31,15 @@ class ProfilePictureUploader < CarrierWave::Uploader::Base
     # Create different versions of your uploaded files:
     version :large_profile_picture do
       # returns a 150x150 image
-      process :resize_to_fill => [150, 150]
+      process resize_to_fill: [150, 150]
     end
     version :medium_profile_picture do
       # returns a 50x50 image
-      process :resize_to_fill => [50, 50]
+      process resize_to_fill: [50, 50]
     end
     version :small_profile_picture do
       # returns a 35x35 image
-      process :resize_to_fill => [35, 35]
+      process resize_to_fill: [35, 35]
     end
 
     # Add a white list of extensions which are allowed to be uploaded.

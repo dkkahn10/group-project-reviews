@@ -34,7 +34,7 @@ feature 'profile picture' do
 
       expect(page).to have_xpath(
        "//img[contains(@src,'/images/default_profile_picture.png')]"
-       )
+      )
     end
 
     scenario "So I can see my edit form" do

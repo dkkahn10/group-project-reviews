@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20161007180417) do
     t.string  "reasoning"
     t.integer "location_id"
     t.integer "user_id"
-    t.integer "upvote_count",    default: 0
-    t.integer "downvote_count",  default: 0
+    t.integer "upvote_count",    default: 0, null: false
+    t.integer "downvote_count",  default: 0, null: false
     t.index ["location_id"], name: "index_reviews_on_location_id", using: :btree
     t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
   end

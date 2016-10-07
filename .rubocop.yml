@@ -7,6 +7,9 @@ inherit_from:
   - enabled.yml
   - disabled.yml
 
+Documentation:
+  Enabled: false
+
 # Common configuration.
 AllCops:
   # Include common Ruby source files.
@@ -31,7 +34,8 @@ AllCops:
     - '**/*Fastfile'
   Exclude:
     - 'vendor/**/*'
-    -db/schema.rb
+    - 'db/schema.rb'
+  ShowCopNames: true
   # Default formatter will be used if no -f/--format option is given.
   DefaultFormatter: progress
   # Cop names are not displayed in offense messages by default. Change behavior
@@ -518,6 +522,7 @@ Style/FormatString:
     - percent
 
 Style/FrozenStringLiteralComment:
+  Enabled: false
   EnforcedStyle: when_needed
   SupportedStyles:
     # `when_needed` will add the frozen string literal comment to files
@@ -555,7 +560,7 @@ Style/HashSyntax:
   PreferHashRocketsForNonAlnumEndingSymbols: false
 
 Style/IfUnlessModifier:
-  MaxLineLength: 150
+  MaxLineLength: 200
 
 Style/IndentationConsistency:
   # The difference between `rails` and `normal` is that the `rails` style
@@ -894,7 +899,11 @@ Style/StabbyLambdaParentheses:
     - require_no_parentheses
 
 Style/StringLiterals:
-  Enabled: false 
+  Enabled: false
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+    -single_quotes
+    -double_quotes
   # If true, strings which span multiple lines using \ for continuation must
   # use the same type of quotes on each line.
   ConsistentQuotesInMultiline: false
@@ -1069,7 +1078,7 @@ Style/VariableNumber:
     - non_integer
 
 Style/WhileUntilModifier:
-  MaxLineLength: 150
+  MaxLineLength: 200
 
 # WordArray enforces how array literals of word-like strings should be expressed.
 Style/WordArray:
@@ -1109,7 +1118,7 @@ Metrics/CyclomaticComplexity:
   Max: 6
 
 Metrics/LineLength:
-  Max: 150
+  Max: 200
   # To make it possible to copy or click on URIs in the code, we allow lines
   # containing a URI to be longer than Max.
   AllowHeredoc: true

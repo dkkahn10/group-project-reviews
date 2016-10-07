@@ -1,31 +1,27 @@
 require 'rails_helper'
 
 feature "visitors can see list of reviews for the location" do
-  scenario "sees reviews for specific location" do
-    dumpling_king = Location.create(name_of_location: 'Dumpling King', description: "Great place for a cheap date, but not a first date")
-    review_for_dumpling_king = Review.create(intimacy_rating: 2, reasoning: "It's more of a cafeteria, so not super romantic", location: dumpling_king)
+  let!(:location) { FactoryGirl.create(:location) }
+  let!(:location_2) { FactoryGirl.create(:location) }
+  let!(:review) { FactoryGirl.create(:review, location: location) }
+  let!(:review_2) { FactoryGirl.create(:review, location: location_2) }
 
-    visit location_path(dumpling_king)
+  scenario 'sees reviews for specific location' do
+    visit location_path(location)
 
-    expect(page).to have_content dumpling_king.name_of_location
-    expect(page).to have_content review_for_dumpling_king.intimacy_rating
-    expect(page).to have_content review_for_dumpling_king.reasoning
+    expect(page).to have_content location.name_of_location
+    expect(page).to have_content review.intimacy_rating
+    expect(page).to have_content review.reasoning
   end
 
-  scenario "does not see other reviews for other locations" do
-    dumpling_king = Location.create(name_of_location: 'Dumpling King', description: "Great place for a cheap date, but not a first date")
-    review_for_dumpling_king = Review.create(intimacy_rating: 2, reasoning: "It's more of a cafeteria, so not super romantic", location: dumpling_king)
-    rock_bottom = Location.create(name_of_location: "Rock Bottom", description: "Best last chance. Worst date spot ever")
-    review_for_rock_bottom = Review.create(intimacy_rating: 1, reasoning: "You'll probably never see her again", location: rock_bottom)
+  scenario 'does not see other reviews for other locations' do
+    visit location_path(location_2)
 
-    visit location_path(rock_bottom)
+    expect(page).to have_content location_2.name_of_location
+    expect(page).to have_content review_2.intimacy_rating
+    expect(page).to have_content review_2.reasoning
 
-    expect(page).to have_content rock_bottom.name_of_location
-    expect(page).to have_content review_for_rock_bottom.intimacy_rating
-    expect(page).to have_content review_for_rock_bottom.reasoning
-
-    expect(page).not_to have_content dumpling_king.name_of_location
-    expect(page).not_to have_content review_for_dumpling_king.intimacy_rating
-    expect(page).not_to have_content review_for_dumpling_king.reasoning
+    expect(page).not_to have_content location.name_of_location
+    expect(page).not_to have_content review.reasoning
   end
 end

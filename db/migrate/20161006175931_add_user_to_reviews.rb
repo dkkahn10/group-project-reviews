@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-# Top Level Class 
 class AddUserToReviews < ActiveRecord::Migration[5.0]
   def change
     add_reference :reviews, :user, foreign_key: true

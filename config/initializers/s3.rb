@@ -5,5 +5,5 @@ CarrierWave.configure do |config|
       :aws_secret_access_key  => ENV['S3_SECRET']
       # :region                 => ENV['S3_REGION'] # Change this for different AWS region. Default is 'us-east-1'
   }
-  config.fog_directory  = ENV['S3_BUCKET']
+  config.fog_directory = ENV['S3_BUCKET']
 end

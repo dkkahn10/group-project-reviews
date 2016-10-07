@@ -12,14 +12,15 @@ feature 'a user can upvote or downvote a review' do
       login_as(user)
       visit location_path(location)
 
-      expect(page).to have_button('Upvote')
-      expect(page).to have_button('Downvote')
+      expect(page).to have_button('Thumbs Up')
+      expect(page).to have_button('Thumbs Down')
     end
 
     scenario 'user upvotes a review' do
       login_as(user)
       visit location_path(location)
-      click_button 'Upvote'
+      save_and_open_page
+      first('.vote_buttons').click_button('Thumbs Up')
 
       expect(page).to have_content(review.upvote_count + 1)
       expect(page).to have_content(review.downvote_count)
@@ -28,7 +29,7 @@ feature 'a user can upvote or downvote a review' do
     scenario 'user downvotes a review' do
       login_as(user)
       visit location_path(location)
-      click_button 'Downvote'
+      click_button 'Thumbs Down'
 
       expect(page).to have_content(review.upvote_count)
       expect(page).to have_content(review.downvote_count + 1)
@@ -37,8 +38,8 @@ feature 'a user can upvote or downvote a review' do
     scenario 'user upvotes a review and then changes their vote to a downvote' do
       login_as(user)
       visit location_path(location)
-      click_button 'Upvote'
-      click_button 'Downvote'
+      click_button 'Thumbs Up'
+      click_button 'Thumbs Down'
 
       expect(page).to have_content(review.upvote_count)
       expect(page).to have_content(review.downvote_count + 1)
@@ -49,8 +50,8 @@ feature 'a user can upvote or downvote a review' do
     scenario 'user downvotes a review and then changes their vote to an upvote' do
       login_as(user)
       visit location_path(location)
-      click_button 'Downvote'
-      click_button 'Upvote'
+      click_button 'Thumbs Up'
+      click_button 'Thumbs Down'
 
       expect(page).to have_content(review.upvote_count + 1)
       expect(page).to have_content(review.downvote_count)
@@ -61,7 +62,7 @@ feature 'a user can upvote or downvote a review' do
     scenario 'upvoting a review does not effect the votes of other reviews' do
       login_as(user)
       visit location_path(location)
-      click_button 'Downvote'
+      click_button 'Thumbs Down'
 
       expect(page).to have_content(review.upvote_count + 1)
       expect(page).to have_content(review_2.upvote_count)
@@ -71,7 +72,7 @@ feature 'a user can upvote or downvote a review' do
 
     scenario 'an unauthenticated user cannot upvote a review' do
       visit location_path(location)
-      click_button 'Upvote'
+      click_button 'Thumbs Up'
 
       expect(page).to have_content('You need to sign in or sign up before continuing.')
       expect(page).to_not have_content(review.upvote_count + 1)
@@ -79,7 +80,7 @@ feature 'a user can upvote or downvote a review' do
 
     scenario 'an unauthenticated user cannot downvote a review' do
       visit location_path(location)
-      click_button 'Downvote'
+      click_button 'Thumbs Down'
 
       expect(page).to have_content('You need to sign in or sign up before continuing.')
       expect(page).to_not have_content(review.downvote_count + 1)

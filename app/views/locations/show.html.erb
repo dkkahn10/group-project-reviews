@@ -17,6 +17,13 @@
   <%= review.intimacy_rating %>
   <%= review.reasoning %>
 
+  <div class="vote_buttons">
+    <% if user_signed_in? %>
+      <%= button_to "Thumbs Up" %>
+      <%= button_to "Thumbs Down" %>
+    <% end %>
+  </div>
+
   <div>
       <% if review.user == current_user %>
         <%= button_to "Edit Review", edit_location_review_path(@location, review) %>

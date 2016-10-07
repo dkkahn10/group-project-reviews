@@ -7,6 +7,9 @@ inherit_from:
   - enabled.yml
   - disabled.yml
 
+Documentation:
+  Enabled: false
+
 # Common configuration.
 AllCops:
   # Include common Ruby source files.
@@ -31,7 +34,7 @@ AllCops:
     - '**/*Fastfile'
   Exclude:
     - 'vendor/**/*'
-    -db/schema.rb
+    - 'db/schema.rb'
   # Default formatter will be used if no -f/--format option is given.
   DefaultFormatter: progress
   # Cop names are not displayed in offense messages by default. Change behavior
@@ -518,6 +521,7 @@ Style/FormatString:
     - percent
 
 Style/FrozenStringLiteralComment:
+  Enabled: false
   EnforcedStyle: when_needed
   SupportedStyles:
     # `when_needed` will add the frozen string literal comment to files
@@ -894,7 +898,11 @@ Style/StabbyLambdaParentheses:
     - require_no_parentheses
 
 Style/StringLiterals:
-  Enabled: false 
+  Enabled: false
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+    -single_quotes
+    -double_quotes
   # If true, strings which span multiple lines using \ for continuation must
   # use the same type of quotes on each line.
   ConsistentQuotesInMultiline: false

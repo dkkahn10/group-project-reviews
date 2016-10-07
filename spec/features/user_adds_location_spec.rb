@@ -1,12 +1,8 @@
 require 'rails_helper'
 
-# As an authenticated user
-# I want to add an item
-# So that others can review it
-
 feature "users can add location" do
-  let!(:user) {FactoryGirl.create(:user)}
-  let!(:location) {FactoryGirl.create(:location)}
+  let!(:user) { FactoryGirl.create(:user) }
+  let!(:location) { FactoryGirl.create(:location) }
   scenario "authenticated user adds new location successfully" do
     login_as(user)
     visit new_location_path

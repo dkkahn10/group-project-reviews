@@ -8,13 +8,13 @@ feature 'profile picture' do
       visit root_path
       click_link 'Sign Up'
       fill_in 'Username', with: 'newUser'
-      attach_file 'user_profile_picture', "#{Rails.root}/spec/support/images/LaunchHalloween16.jpg"
+      attach_file 'user_profile_picture', "#{Rails.root}/spec/support/images/sample_bird.jpeg"
       fill_in 'Email', with: 'email@gmail.com'
       fill_in 'Password', with: 'password'
       fill_in 'Password confirmation', with: 'password'
       click_button 'Sign up'
       expect(page).to have_xpath(
-        "//img[contains(@src,'LaunchHalloween16.jpg')]"
+        "//img[contains(@src,'sample_bird.jpeg')]"
       )
       expect(page).to have_content('Welcome! You have signed up successfully.')
       expect(page).to have_content('Sign Out')

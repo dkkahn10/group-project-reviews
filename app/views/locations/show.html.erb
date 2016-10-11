@@ -1,3 +1,4 @@
+<% require 'pry' %>
 <h1> Location </h1>
 <ul>
   <li><%= @location.name_of_location %></li>
@@ -18,9 +19,8 @@
   <%= review.reasoning %>
 
   <div>
-      <% if review.user == current_user %>
-        <%= button_to "Edit Review", edit_location_review_path(@location, review) %>
+      <% if review.user == current_user || current_user.admin? %>
+        <%= link_to "Edit Review", edit_location_review_path(@location, review) %>
       <% end %>
   </div>
-
 <% end %>

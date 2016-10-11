@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   root "locations#index"
 
   resources :locations do
-    resources :reviews, except: [:show]
+    resources :reviews, except: [:show, :index]
   end
 
-  devise_for :users
+  resources :votes, only: [:update]
 
-  resources :users
+  devise_for :users
 end

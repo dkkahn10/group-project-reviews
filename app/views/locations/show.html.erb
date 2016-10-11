@@ -17,6 +17,18 @@
   <%= review.intimacy_rating %>
   <%= review.reasoning %>
 
+  <%= form_for(@vote, :remote => true) do |f| %>
+    <%= f.hidden_field "review_id", :value => review.id %>
+    <%= f.hidden_field "vote", :value => 0 %>
+    <%= submit_tag "Thumbs Up", :class => 'up-vote' %>
+  <% end %>
+
+  <%= form_for(@vote, :remote => true) do |f| %>
+    <%= f.hidden_field "review_id", :value => review.id %>
+    <%= f.hidden_field "vote", :value => 0 %>
+    <%= submit_tag "Thumbs Down", :class => 'down-vote' %>
+  <% end %>
+
   <div class="vote_buttons">
     <% if user_signed_in? %>
       <%= button_to "Thumbs Up" %>

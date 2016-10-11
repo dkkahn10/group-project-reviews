@@ -15,7 +15,8 @@ class ReviewsController < ApplicationController
     @review.user = current_user
 
     if @review.save
-      redirect_to location_path(@location), notice: "Review added successfully"
+      flash[:notice] = "Review added successfully"
+      redirect_to location_path(@location)
     else
       flash[:notice] = @review.errors.full_messages.join(", ")
       render :new

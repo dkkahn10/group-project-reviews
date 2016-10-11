@@ -6,7 +6,14 @@ Rails.application.routes.draw do
     resources :reviews, except: [:show, :index]
   end
 
-  resources :votes, only: [:update]
+  resources :reviews do
+    resources :votes do
+      member do
+        post :upvote
+        post :downvote
+      end
+    end
+  end
 
   devise_for :users
 end

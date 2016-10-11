@@ -17,29 +17,26 @@
   <%= review.intimacy_rating %>
   <%= review.reasoning %>
 
-  <%= form_for(@vote, :remote => true) do |f| %>
-    <%= f.hidden_field "review_id", :value => review.id %>
-    <%= f.hidden_field "vote", :value => 0 %>
-    <%= submit_tag "Thumbs Up", :class => 'up-vote' %>
-  <% end %>
-
-  <%= form_for(@vote, :remote => true) do |f| %>
-    <%= f.hidden_field "review_id", :value => review.id %>
-    <%= f.hidden_field "vote", :value => 0 %>
-    <%= submit_tag "Thumbs Down", :class => 'down-vote' %>
-  <% end %>
-
-  <div class="vote_buttons">
-    <% if user_signed_in? %>
-      <%= button_to "Thumbs Up" %>
-      <%= button_to "Thumbs Down" %>
+  <div class="total-votes">
+    Total Votes:
+    <% sum = 0 %>
+    <% review.votes.each do |value| %>
+      <% sum += value %>
     <% end %>
+    <%= sum %>
+  </div>
+
+  <div class="thumbs-up-button">
+    <%= button_to "Thumbs Up", upvote_review_votes_path(review), remote: true, method: :post%>
+  </div>
+  <div class="thumbs-down-button">
+    <%= button_to "Thumbs Down", downvote_review_votes_path(review), remote: true, method: :post%>
   </div>
 
   <div>
-      <% if review.user == current_user %>
-        <%= button_to "Edit Review", edit_location_review_path(@location, review) %>
-      <% end %>
+    <% if review.user == current_user %>
+      <%= button_to "Edit Review", edit_location_review_path(@location, review) %>
+    <% end %>
   </div>
 
 <% end %>

@@ -26,4 +26,4 @@ Things you may want to cover:
 
 ![Build Status](https://codeship.com/projects/6c866a60-6ba7-0134-54fc-2e8398cca30e/status?branch=master)
 ![Code Climate](https://codeclimate.com/github/dkkahn10/group-project-reviews.png)
-![Coverage Status](https://coveralls.io/repos//dkkahn10/group-project-reviews/badge.png)
+[![Coverage Status](https://coveralls.io/repos/github/dkkahn10/group-project-reviews/badge.svg)](https://coveralls.io/github/dkkahn10/group-project-reviews)

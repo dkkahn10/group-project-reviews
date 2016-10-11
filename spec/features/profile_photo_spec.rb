@@ -14,7 +14,8 @@ feature 'profile picture' do
       fill_in 'Password confirmation', with: 'password'
       click_button 'Sign up'
       expect(page).to have_xpath(
-      "//img[contains(@src,'LaunchHalloween16.jpg')]")
+        "//img[contains(@src,'LaunchHalloween16.jpg')]"
+      )
       expect(page).to have_content('Welcome! You have signed up successfully.')
       expect(page).to have_content('Sign Out')
     end
@@ -33,7 +34,7 @@ feature 'profile picture' do
       click_button 'Update'
 
       expect(page).to have_xpath(
-       "//img[contains(@src,'/images/default_profile_picture.png')]"
+        "//img[contains(@src,'/images/default_profile_picture.png')]"
       )
     end
 

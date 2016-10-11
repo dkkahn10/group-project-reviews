@@ -5,7 +5,6 @@ feature 'a user can upvote or downvote a review' do
   let!(:user) { FactoryGirl.create(:user) }
   let!(:location) { FactoryGirl.create(:location) }
   let!(:review) { FactoryGirl.create(:review, location: location) }
-  let!(:review_2) { FactoryGirl.create(:review, location: location) }
 
   context 'a user views the reviews on a location\'s show page' do
     scenario 'user sees upvote and downvote options' do
@@ -20,7 +19,7 @@ feature 'a user can upvote or downvote a review' do
       login_as(user)
       visit location_path(location)
       save_and_open_page
-      first('.vote_buttons').click_button('Thumbs Up')
+      click_button 'Thumbs Up'
 
       expect(page).to have_content(review.upvote_count + 1)
       expect(page).to have_content(review.downvote_count)
@@ -57,17 +56,6 @@ feature 'a user can upvote or downvote a review' do
       expect(page).to have_content(review.downvote_count)
       expect(page).to_not have_content(review.upvote_count)
       expect(page).to_not have_content(review.downvote_count + 1)
-    end
-
-    scenario 'upvoting a review does not effect the votes of other reviews' do
-      login_as(user)
-      visit location_path(location)
-      click_button 'Thumbs Down'
-
-      expect(page).to have_content(review.upvote_count + 1)
-      expect(page).to have_content(review_2.upvote_count)
-      expect(page).to_not have_content(review_2.upvote_count + 1)
-
     end
 
     scenario 'an unauthenticated user cannot upvote a review' do

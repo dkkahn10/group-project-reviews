@@ -46,6 +46,14 @@ ActiveRecord::Schema.define(version: 20161007180417) do
     t.datetime "updated_at",                                null: false
     t.string   "role",                   default: "member", null: false
     t.string   "username",                                  null: false
+    t.string   "profile_picture"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string   "unconfirmed_email"
+    t.integer  "failed_attempts",        default: 0,        null: false
+    t.string   "unlock_token"
+    t.datetime "locked_at"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end

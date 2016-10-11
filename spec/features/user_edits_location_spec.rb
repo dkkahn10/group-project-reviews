@@ -17,8 +17,8 @@ feature 'user can update/edit a location' do
         click_link 'Edit Location'
 
         expect(page).to have_content('Location Edit Form')
-        page.should have_field('Name of Location')
-        page.should have_field('Description')
+        expect(page).to have_field('Name of Location')
+        expect(page).to have_field('Description')
       end
 
       scenario 'when a user clicks the edit button, the location information should render in the form' do
@@ -29,8 +29,8 @@ feature 'user can update/edit a location' do
         click_button 'Add Location'
         click_link 'Edit Location'
 
-        page.should have_field('Name of Location', with: 'Restaurant')
-        page.should have_field('Description', with: 'I love this place')
+        expect(page).to have_field('Name of Location', with: 'Restaurant')
+        expect(page).to have_field('Description', with: 'I love this place')
       end
 
       scenario 'a user edits a page successfully' do

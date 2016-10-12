@@ -2,7 +2,7 @@ class LocationsController < ApplicationController
   def index
     @locations = if params[:search]
                     Location.search(params[:search])
-                  else
+                 else
                     Location.all
                  end
   end

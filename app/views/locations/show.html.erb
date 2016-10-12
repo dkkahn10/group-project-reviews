@@ -19,11 +19,7 @@
 
   <div class="total-votes">
     Total Votes:
-    <% sum = 0 %>
-    <% review.votes.each do |value| %>
-      <% sum += value %>
-    <% end %>
-    <%= sum %>
+    <%= review.votes_total %>
   </div>
 
   <div class="thumbs-up-button">

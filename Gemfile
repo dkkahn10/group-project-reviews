@@ -11,6 +11,10 @@ gem 'listen'
 gem 'foundation-rails'
 gem 'devise'
 gem 'rubocop'
+gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
+gem 'fog'
+gem 'mini_magick'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'capybara'

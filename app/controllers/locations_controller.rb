@@ -1,9 +1,9 @@
 class LocationsController < ApplicationController
   def index
     @locations = if params[:search]
-                    Location.search(params[:search])
+                   Location.search(params[:search])
                  else
-                    Location.all
+                   Location.all
                  end
   end
 

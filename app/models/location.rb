@@ -5,6 +5,6 @@ class Location < ActiveRecord::Base
 
   def self.search(search)
     where("name_of_location ILIKE ?", "%#{search}%") ||
-    where("description ILIKE ?", "%#{search}%")
+      where("description ILIKE ?", "%#{search}%")
   end
 end

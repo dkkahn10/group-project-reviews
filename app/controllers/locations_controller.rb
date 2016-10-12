@@ -3,8 +3,6 @@ class LocationsController < ApplicationController
     @locations = Location.all
     if params[:search]
       @locations = Location.search(params[:search])
-    else
-      @locations = Location.all
     end
   end
 

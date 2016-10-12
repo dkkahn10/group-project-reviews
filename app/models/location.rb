@@ -4,7 +4,8 @@ class Location < ActiveRecord::Base
   validates :description , presence: true
 
   def self.search(search)
-    where("name_of_location ILIKE ?", "%#{search}%") ||
-      where("description ILIKE ?", "%#{search}%")
+    where("name_of_location ILIKE ? OR description ILIKE ?",
+      "%#{search}%",
+      "%#{search}%",)
   end
 end

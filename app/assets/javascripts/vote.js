@@ -14,7 +14,7 @@
 $(document).ready (function() {
   $('.thumbs-up-button').on('click', function(event) {
     event.preventDefault();
-    
+
     var request = $.ajax({
       method: "PUT"
       url: "/reviews/" + id + "/votes"
@@ -27,4 +27,9 @@ $(document).ready (function() {
       url: "/reviews/" + id + "/votes"
     })
   })
+
+
+  request.done...
+
+  getElementby(get id from your html).innerHTML = data.upvote_count `${} upvotes`
 })

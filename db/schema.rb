@@ -58,9 +58,9 @@ ActiveRecord::Schema.define(version: 20161012130025) do
   end
 
   create_table "votes", force: :cascade do |t|
-    t.integer "users_id",               null: false
-    t.integer "reviews_id",             null: false
-    t.integer "vote_value", default: 0, null: false
+    t.integer "users_id",   null: false
+    t.integer "reviews_id", null: false
+    t.boolean "vote_value"
     t.index ["reviews_id"], name: "index_votes_on_reviews_id", using: :btree
     t.index ["users_id"], name: "index_votes_on_users_id", using: :btree
   end

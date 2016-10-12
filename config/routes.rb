@@ -7,11 +7,8 @@ Rails.application.routes.draw do
   end
 
   resources :reviews do
-    resources :votes do
-      member do
-        post :upvote
-        post :downvote
-      end
+    member do
+      post 'upvote', 'downvote'
     end
   end
 

@@ -17,16 +17,16 @@
   <%= review.intimacy_rating %>
   <%= review.reasoning %>
 
-  <div class="total-votes">
+  <div class="total-votes-entire">
     Total Votes:
-    <%= review.votes_total %>
+    <div id="total-votes-value#{review.id}"></div>
   </div>
 
-  <div class="thumbs-up-button">
-    <%= button_to "Thumbs Up", upvote_review_votes_path(review), remote: true, method: :post%>
+  <div>
+    <%= button_to "Thumbs Up", upvote_review_path(review.id), class: 'thumbs-up-button', id: "#{review.id}", remote: true, method: :post %>
   </div>
-  <div class="thumbs-down-button">
-    <%= button_to "Thumbs Down", downvote_review_votes_path(review), remote: true, method: :post%>
+  <div>
+    <%= button_to "Thumbs Down", downvote_review_path(review.id), class: 'thumbs-down-button', id: "#{review.id}", remote: true, method: :post %>
   </div>
 
   <div>

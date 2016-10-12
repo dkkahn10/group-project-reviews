@@ -1,7 +1,7 @@
 require 'rails_helper'
 include Warden::Test::Helpers
 
-feature 'admin can delete other users\' locations and reviews' do
+feature 'admin can delete other users\' locations' do
   let!(:user) { FactoryGirl.create(:user) }
   let!(:admin) { FactoryGirl.create(:user, role: 'admin') }
   let!(:location) { FactoryGirl.create(:location) }

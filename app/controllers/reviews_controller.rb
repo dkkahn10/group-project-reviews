@@ -47,7 +47,7 @@ class ReviewsController < ApplicationController
     if @review.user == current_user || current_user.admin?
       @review.destroy
       flash[:notice] = "Review was deleted"
-      redirect_to locations_path(location)
+      redirect_to location_path(@location)
     end
   end
 

@@ -2,6 +2,7 @@
 Rails.application.routes.draw do
   root "locations#index"
 
+  resources :users, only: [:index]
   resources :locations do
     resources :reviews, except: [:show]
   end

@@ -1,0 +1,6 @@
+<h1>User Index Page</h1>
+
+<% @users.each do |user| %>
+  <li><%= user.username %></li>
+  <%= link_to "Delete #{user.username}", @user, method: :delete, data: { confirm: "You sure?" } %>
+<% end %>

@@ -4,7 +4,7 @@ class LocationsController < ApplicationController
                     Location.search(params[:search])
                   else
                     Location.all
-                  end
+                 end
   end
 
   def new

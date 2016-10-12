@@ -4,12 +4,16 @@ $(document).ready(function() {
     event.preventDefault();
     var url = this.parentElement.action;
     var currentTarget = $(event.currentTarget);
-    var id = this.id;
+    var id = parseInt(this.id);
     var request = $.ajax({
       url: `${url}.json`,
-      method: "PUT"
+      method: "POST",
     })
-  })
+
+    request.done(function(data) {
+      document.getElementById(`total${id}`).innerHTML = data.vote;
+    });
+  });
 
   $('.thumbs-down-button').on('click', function(event) {
     event.preventDefault();
@@ -18,12 +22,11 @@ $(document).ready(function() {
     var id = this.id;
     var request = $.ajax({
       url: `${url}.json`,
-      method: "PUT"
+      method: "POST",
     })
+    request.done(function(data) {
+      document.getElementById(`total${id}`).innerHTML = data.vote;
+    });
   })
-
-  request.done(function(data) {
-    getElementByClass(".total-votes-value").innerHTML = "lksdjfoisdj"
-  });
 
 })

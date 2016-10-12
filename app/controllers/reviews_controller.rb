@@ -41,13 +41,12 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @location = Location.find(params[:location_id])
     @review = Review.find(params[:id])
-
+    @location = Location.find(params[:location_id])
     if @review.user == current_user || current_user.admin?
       @review.destroy
       flash[:notice] = "Review was deleted"
-      redirect_to location_path(@location)
+      redirect_to location_path(@location) 
     end
   end
 

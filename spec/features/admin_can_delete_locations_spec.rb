@@ -6,7 +6,6 @@ feature 'admin can delete other users\' locations' do
   let!(:admin) { FactoryGirl.create(:user, role: 'admin') }
   let!(:location) { FactoryGirl.create(:location) }
   scenario 'an admin can delete a location' do
-
     login_as(admin)
     visit location_path(location)
     click_link 'Edit Location'
@@ -14,7 +13,6 @@ feature 'admin can delete other users\' locations' do
   end
 
   scenario 'an admin can successfully delete a location' do
-
     login_as(admin)
     visit location_path(location)
     click_link 'Edit Location'

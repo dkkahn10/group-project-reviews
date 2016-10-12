@@ -13,7 +13,6 @@ feature 'an admin can delete a review if they deem it inappropriate' do
     click_link 'Edit Review'
     click_link 'Delete'
 
-
     expect(page).to have_content('Review was deleted')
     expect(page).to_not have_content review.reasoning
   end

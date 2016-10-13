@@ -1,37 +1,41 @@
-<h1> Location </h1>
-<ul>
-  <li><%= @location.name_of_location %></li>
-  <li><%= @location.description %></li>
-<ul>
+<div class= 'wrapper'>
+  <h1> <%= @location.name_of_location %> </h1>
+    <p><%= @location.description %><p>
 
-<div class="button">
-  <%= link_to "Add a Review", new_location_review_path(@location)%>
+
+  <div class="button">
+    <%= link_to "Edit Location", edit_location_path(@location), class: 'btn'%>
+  </div>
+
+  <div class ="reviews">
+      <h2>Reviews</h2>
+      <% @reviews.each do |review| %>
+      <div class="single_review">
+        <p>Rating: <%= review.intimacy_rating %></p>
+        <p><%= review.reasoning %></p>
+      </div>
+        <div class="total-votes-entire">
+          <h4>Vote Score:</h4>
+          <div id="total<%= review.id %>"> <%= review.tally %> </div>
+        </div>
+
+        <div class="voting">
+          <div>
+            <%= button_to "Thumbs Up", upvote_review_path(review.id), class: 'thumbs-up-button', id: "#{review.id}", remote: true, method: :post %>
+          </div>
+          <div>
+            <%= button_to "Thumbs Down", downvote_review_path(review.id), class: 'thumbs-down-button', id: "#{review.id}", remote: true, method: :post %>
+          </div>
+        </div>
+
+        <div>
+          <% if review.user == current_user || current_user.try(:admin?) %>
+            <%= link_to "Edit Review", edit_location_review_path(@location, review), class: 'btn', id:'edit-review' %>
+          <% end %>
+        </div>
+      <% end %>
+      <div class="button">
+        <%= link_to "Add a Review", new_location_review_path(@location), class: 'btn'%>
+      </div>
+    </div>
 </div>
-
-<div class="button">
-  <%= link_to "Edit Location", edit_location_path(@location)%>
-</div>
-
-<h2>Reviews</h2>
-<% @reviews.each do |review| %>
-  <%= review.intimacy_rating %>
-  <%= review.reasoning %>
-
-  <div class="total-votes-entire">
-    Vote Score:
-    <div id="total<%= review.id %>"> <%= review.tally %> </div>
-  </div>
-
-  <div>
-    <%= button_to "Thumbs Up", upvote_review_path(review.id), class: 'thumbs-up-button', id: "#{review.id}", remote: true, method: :post %>
-  </div>
-  <div>
-    <%= button_to "Thumbs Down", downvote_review_path(review.id), class: 'thumbs-down-button', id: "#{review.id}", remote: true, method: :post %>
-  </div>
-
-  <div>
-    <% if review.user == current_user || current_user.try(:admin?) %>
-      <%= link_to "Edit Review", edit_location_review_path(@location, review) %>
-    <% end %>
-  </div>
-<% end %>

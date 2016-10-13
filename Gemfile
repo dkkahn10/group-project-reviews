@@ -15,6 +15,7 @@ gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'fog'
 gem 'mini_magick'
 gem 'dotenv-rails'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'capybara'

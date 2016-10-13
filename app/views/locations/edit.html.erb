@@ -1,17 +1,19 @@
-<h1>Location Edit Form</h1>
-<%= form_for(@location) do |f| %>
-  <div class="field" id="name_of_location" value="#{@location.name_of_location}">
-    <%= f.label :name_of_location, "Name of Location" %>
-    <%= f.text_field :name_of_location %>
-  </div>
-  <div class="field" id="description" value="#{@location.description}">
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-  </div>
-  <div class="action">
-    <%= f.submit "Edit" %>
-  </div>
+<div class ="wrapper">
+  <h1>Location Edit Form</h1>
+  <%= form_for(@location) do |f| %>
+    <div class="field" id="name_of_location" value="#{@location.name_of_location}">
+      <%= f.label :name_of_location, "Name of Location" %>
+      <%= f.text_field :name_of_location %>
+    </div>
+    <div class="field" id="description" value="#{@location.description}">
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+    </div>
+    <div class="action">
+      <%= f.submit "Edit", class: 'btn' %>
+    </div>
 
-<% end %>
+  <% end %>
 
-<br><h4><%= link_to "Delete", @location, method: :delete, data: { confirm: "You sure?" } %></h4>
+  <br><h4><%= link_to "Delete", @location, method: :delete, data: { confirm: "You sure?" }, class: 'btn' %></h4>
+</div>

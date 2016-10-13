@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  font-family: sans-serif;
 }
 body {
   background-image: url("http://wp.streetwise.co/wp-content/uploads//2014/05/6-Active-Date-Ideas-To-Do-In-Boston-.jpg");
@@ -8,10 +9,25 @@ body {
   margin: 0;
 }
 
-h1 {
+h1, h2 {
   margin: auto;
-  font-size: 48px;
   color: #353E41;
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
+}
+
+h1{
+  font-size: 48px;
+}
+
+h2 {
+  margin: 2em auto 0.5em;
+}
+
+p {
+  font-size: 1.5em;
+  color: #353E41;
+  padding-bottom: 1%;
 }
 
 nav {
@@ -23,7 +39,6 @@ nav {
 
 nav ul li {
   display: inline-block;
-  font-family: Helvetica, sans-serif;
   text-transform: uppercase;
   list-style-type: none;
 }
@@ -60,11 +75,6 @@ nav ul {
   position: relative;
 }
 
-#landing_div h1 {
-  font-family: sans-serif;
-  text-transform: uppercase;
-  padding-bottom: 0.5em;
-}
 
 #landing_div #search-form {
   margin: auto;
@@ -100,7 +110,94 @@ input:focus {
   color: white;
 }
 
+#replacing_content{
+  display:none;
+}
 
-#visited-locations {
-  margin: 200px auto;
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.75);
+  margin: 10% auto;
+  max-width: 75%;
+  padding: 2%;
+  text-align: center;
+}
+
+.btn {
+  width: 15%;
+  border: none;
+  margin: 1% auto;
+  background-color: white;
+  color: #353E41;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease;
+  text-decoration: none;
+  font-size: 0.75em;
+  padding: 1% 0;
+  display: block;
+  font-family: sans-serif;;
+}
+
+#replacing_content .locations a{
+  text-decoration: none;
+  color: #353E41;
+  line-height: 25px;
+}
+
+#replacing_content .locations a:hover {
+  text-decoration: underline;
+}
+
+.btn:hover{
+  background-color: #353E41;
+  color: white;
+}
+
+.review p {
+  color: #353E41;
+  font-size: 100px;
+}
+
+.thumbs-up-button, {
+  float:left;
+  max-width: 50%;
+}
+
+.thumbs-down-button {
+  float:right;
+  max-width: 50%;
+}
+
+#edit_review {
+  clear:both;
+}
+
+.voting {
+  max-width: 25%;
+  margin: auto;
+  margin-bottom: 7%;
+
+}
+
+.wrapper .user {
+  text-align: left;
+}
+
+.wrapper .delete_user {
+  text-align: right;
+  list-style-type:none;
+}
+.wrapper .users_list .user {
+  list-style-type: none;
+
+}
+
+.users_list {
+  margin: auto;
+  max-width: 40%;
+}
+
+.profpic {
+  margin: auto;
+  text-align: center;
 }

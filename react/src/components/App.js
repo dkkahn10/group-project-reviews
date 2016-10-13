@@ -6,9 +6,10 @@ class App extends Component {
     this.state = {
       locations: []
     };
+    this.handleLocationTimer = this.handleLocationTimer.bind(this);
   }
 
-  componentDidMount() {
+  handleLocationTimer(){
     $.ajax({
       url: '/locations.json',
       method: "GET"
@@ -19,6 +20,10 @@ class App extends Component {
         locations: data.locations
       })
     })
+  }
+
+  componentDidMount() {
+    this.timer = setInterval(this.handleLocationTimer, 1000);
   }
 
   render() {

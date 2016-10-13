@@ -19,9 +19,8 @@
         <% end %>
       </ul>
     </nav>
-    <% flash.each do |key, value| %>
-      <%= value %>
-    <% end %>
+    <p class="notice"> <%= notice %> </p>
+    <p class="alert">  <%= alert %> </p>
     <%= yield %>
   </body>
 </html>

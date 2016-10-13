@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20161012205842) do
 
   # These are extensions that must be enabled in order to support this database
@@ -21,10 +22,11 @@ ActiveRecord::Schema.define(version: 20161012205842) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "intimacy_rating", null: false
+    t.integer "intimacy_rating",             null: false
     t.string  "reasoning"
     t.integer "location_id"
     t.integer "user_id"
+    t.integer "votes_total",     default: 0, null: false
     t.index ["location_id"], name: "index_reviews_on_location_id", using: :btree
     t.index ["user_id"], name: "index_reviews_on_user_id", using: :btree
   end
@@ -55,6 +57,14 @@ ActiveRecord::Schema.define(version: 20161012205842) do
     t.datetime "deleted_at"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  end
+
+  create_table "votes", force: :cascade do |t|
+    t.integer "user_id",    null: false
+    t.integer "review_id",  null: false
+    t.boolean "vote_value"
+    t.index ["review_id"], name: "index_votes_on_review_id", using: :btree
+    t.index ["user_id"], name: "index_votes_on_user_id", using: :btree
   end
 
   add_foreign_key "reviews", "users"

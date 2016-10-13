@@ -3,8 +3,8 @@ class User < ApplicationRecord
 
   validates :username, presence: true
   validates :email, presence: true
-
-  has_many :reviews
+  has_many :votes
+  has_many :reviews, through: :votes
   has_many :locations
 
   def admin?

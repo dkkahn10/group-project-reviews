@@ -28,7 +28,7 @@ feature 'profile picture' do
       fill_in 'Email', with: user.email
       fill_in 'Password', with: user.password
       click_button 'Log in'
-      click_link 'Your Profile'
+      click_link 'Profile'
       attach_file 'user_profile_picture', "#{Rails.root}/spec/support/images/photo.png"
 
       click_button 'Update'
@@ -44,7 +44,7 @@ feature 'profile picture' do
       fill_in 'Email', with: user.email
       fill_in 'Password', with: user.password
       click_button 'Log in'
-      click_link 'Edit Your Profile'
+      click_link 'Profile'
 
       expect(page).to have_css("form")
     end

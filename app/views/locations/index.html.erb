@@ -14,7 +14,7 @@
 
     <div id='replacing_content' class='<%= @class_name %>'>
       <div class ='locations'>
-        <h2> Our Users Have Visted </h2>
+        <h2> Our Users Have Visited </h2>
         <% @locations.each do |location| %>
         <%= link_to location.name_of_location, location_path(location) %> <br>
         <% end %>

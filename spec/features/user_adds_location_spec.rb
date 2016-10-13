@@ -6,7 +6,7 @@ feature "users can add location" do
   scenario "authenticated user adds new location successfully" do
     login_as(user)
     visit new_location_path
-    expect(page).to have_content "New Location Form"
+    expect(page).to have_content "Add A Spot"
 
     fill_in 'Name of Location', with: location.name_of_location
     fill_in 'Description', with: location.description

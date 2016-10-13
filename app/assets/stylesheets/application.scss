@@ -201,3 +201,17 @@ input:focus {
   margin: auto;
   text-align: center;
 }
+
+nav .back_button {
+  color: white;
+  text-decoration: none;
+  padding: 0.5em;
+  transition: background-color 0.25s ease;
+  vertical-align: middle;
+  display:inline-block;
+  margin-left: 2%;
+}
+
+nav .back_button:hover {
+  color: #353E41;
+}

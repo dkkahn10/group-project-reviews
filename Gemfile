@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 source 'https://rubygems.org/'
+ruby '2.3.1'
 
 gem 'rails', '5'
 gem 'pg', '~> 0.15'
@@ -10,6 +11,10 @@ gem 'listen'
 gem 'foundation-rails'
 gem 'devise'
 gem 'rubocop'
+gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
+gem 'fog'
+gem 'mini_magick'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'capybara'

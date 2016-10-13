@@ -5,4 +5,13 @@ class UsersController < ApplicationController
     sign_out_and_redirect(current_user)
   end
 
+  def index
+    @users = User.all
+  end
+
+  private
+
+  def authorized_user?
+    current_user.try(:admin?) || current_user == @user
+  end
 end

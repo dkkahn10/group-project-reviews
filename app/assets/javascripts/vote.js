@@ -15,8 +15,8 @@ $(document).ready(function() {
   });
 
   $('.thumbs-down-button').on('click', function(event) {
-    event.preventDefault();
     let url = this.parentElement.action;
+    event.preventDefault();
     let currentTarget = $(event.currentTarget);
     let id = parseInt(this.id);
     let request = $.ajax({

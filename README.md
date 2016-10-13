@@ -27,7 +27,7 @@ Rate-A-Date is a review site built with Ruby on Rails. This application was desi
 ##Technologies: 
 *	Created with Ruby on Rails
 *	[Devise](https://github.com/plataformatec/devise) used for user authentication/authorization
-*	[Carrierwave](https://github.com/carrierwaveuploader/carrierwave) and [Fog](https://github.com/fog/fog) used for image upload along with [Amazon S3](aws.amazon.com/s3/) image hosting
+*	[Carrierwave](https://github.com/carrierwaveuploader/carrierwave) and [Fog](https://github.com/fog/fog) used for image upload along with [Amazon S3](https://aws.amazon.com/s3/) image hosting
 *	[Foundation](https://github.com/zurb/foundation-rails) gem for stylization
 *	Deployment on [Heroku](http://heroku.com/)
 *	Voting feature constructed with Ajax

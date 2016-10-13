@@ -36,19 +36,9 @@ class ReviewsController < ApplicationController
       @vote.update(vote_value: true)
     end
 
-    @votes = @review.votes
-    @vote_sum = 0
-    @votes.each do |vote|
-      if vote.vote_value == true
-        @vote_sum += 1
-      else vote.vote_value == false
-        @vote_sum -= 1
-      end
-    end
-
     respond_to do |format|
       format.html { redirect_to :back }
-      format.json { render json: {review: @review, vote: @vote_sum} }
+      format.json { render json: {review: @review, vote: @review.tally} }
     end
   end
 
@@ -65,19 +55,9 @@ class ReviewsController < ApplicationController
       @vote.update(vote_value: false)
     end
 
-    @votes = @review.votes
-    @vote_sum = 0
-    @votes.each do |vote|
-      if vote.vote_value == true
-        @vote_sum += 1
-      else vote.vote_value == false
-        @vote_sum -= 1
-      end
-    end
-
     respond_to do |format|
       format.html { redirect_to :back }
-      format.json { render json: {review: @review, vote: @vote_sum} }
+      format.json { render json: {review: @review, vote: @review.tally} }
     end
   end
 

@@ -6,4 +6,16 @@ class Review < ActiveRecord::Base
   has_many :votes
   belongs_to :user
 
+  def tally
+    sum = 0
+    votes.each do |vote|
+      if vote.vote_value == true
+        sum += 1
+      else vote.vote_value == false
+        sum -= 1
+      end
+    end
+    sum
+  end
+
 end

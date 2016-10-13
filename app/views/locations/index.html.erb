@@ -2,7 +2,7 @@
 <div id='landing_div'>
 </div>
 
-<div id = 'datespot_container'
+<div id = 'datespot_container'>
   <h1 id ='date_spots'> Date Spots </h1>
   <div id="search form">
     <%= form_tag(locations_path, :method => "get", id: "search-form") do %>
@@ -11,7 +11,6 @@
     <%= submit_tag "Search" %>
     <% end %>
   </div>
-</div>
 
 <h1> All Locations </h1>
 <% @locations.each do |location| %>

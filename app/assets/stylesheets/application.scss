@@ -30,7 +30,7 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  padding: 1em;
+  padding: 0.5em;
 }
 
 nav ul {
@@ -52,5 +52,10 @@ nav ul {
 #datespot_container {
   text-align: center;
   position: absolute;
-  margin: 50px auto;
+  margin: auto;
+}
+
+#datespot_container h1 {
+  font-size: 4em;
+  font-family: 'Handlee';
 }

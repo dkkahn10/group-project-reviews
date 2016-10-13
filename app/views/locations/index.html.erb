@@ -1,9 +1,17 @@
 
-<h1> Date Spots </h1>
-<%= form_tag(locations_path, :method => "get", id: "search-form") do %>
-<%= text_field_tag :search, params[:search], placeholder: "Search Locations" %>
-<%= submit_tag "Search" %>
-<% end %>
+<div id='landing_div'>
+</div>
+
+<div id = 'datespot_container'
+  <h1 id ='date_spots'> Date Spots </h1>
+  <div id="search form">
+    <%= form_tag(locations_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Plan your next date" %>
+    <br/>
+    <%= submit_tag "Search" %>
+    <% end %>
+  </div>
+</div>
 
 <h1> All Locations </h1>
 <% @locations.each do |location| %>

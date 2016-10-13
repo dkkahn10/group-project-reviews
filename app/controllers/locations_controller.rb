@@ -1,10 +1,15 @@
 class LocationsController < ApplicationController
   def index
     @locations = if params[:search]
-                   Location.search(params[:search])
-                 else
-                   Location.all
-                 end
+       Location.search(params[:search])
+     else
+       Location.all
+     end
+
+     respond_to do |format|
+       format.html 
+       format.json { render json: { locations: Location.all } }
+     end
   end
 
   def new

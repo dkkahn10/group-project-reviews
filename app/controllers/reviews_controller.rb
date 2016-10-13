@@ -36,7 +36,7 @@ class ReviewsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to :back }
+      format.html
       format.json { render json: { review: @review, vote: @review.tally } }
     end
   end
@@ -55,7 +55,7 @@ class ReviewsController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to :back }
+      format.html 
       format.json { render json: { review: @review, vote: @review.tally } }
     end
   end

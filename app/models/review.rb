@@ -11,11 +11,10 @@ class Review < ActiveRecord::Base
     votes.each do |vote|
       if vote.vote_value == true
         sum += 1
-      else vote.vote_value == false
+      elsif vote.vote_value == false
         sum -= 1
       end
     end
     sum
   end
-
 end

@@ -1,5 +1,4 @@
 class ReviewsController < ApplicationController
-
   def index
     @reviews = Review.find(params[:location_id])
   end

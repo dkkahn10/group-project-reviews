@@ -93,5 +93,4 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:intimacy_rating, :reasoning, :votes_total)
   end
-
 end

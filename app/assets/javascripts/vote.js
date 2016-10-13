@@ -9,7 +9,6 @@ $(document).ready(function() {
       url: `${url}.json`,
       method: "POST",
     });
-
     request.done(function(data) {
       document.getElementById(`total${id}`).innerHTML = data.vote;
     });

@@ -30,7 +30,7 @@
 
         <div>
           <% if review.user == current_user || current_user.try(:admin?) %>
-            <%= link_to "Edit Review", edit_location_review_path(@location, review), class: 'btn', id:'edit_review' %>
+            <%= link_to "Edit Review", edit_location_review_path(@location, review), class: 'btn', id:'edit-review' %>
           <% end %>
         </div>
       <% end %>

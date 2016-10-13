@@ -44,8 +44,8 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
+  color: #ffffff;
   padding: 0.5em;
   transition: background-color 0.25s ease;
   vertical-align: middle;
@@ -98,7 +98,7 @@ input:focus {
   width: 20%;
   border: none;
   margin-top: 1em;
-  background-color: white;
+  background-color: #ffffff;
   color: #353e41;
   font-size: 0.75em;
   text-transform: uppercase;
@@ -107,7 +107,7 @@ input:focus {
 
 .submit:hover{
   background-color: #353e41;
-  color: white;
+  color: #ffffff;
 }
 
 #replacing_content{
@@ -126,7 +126,7 @@ input:focus {
   width: 15%;
   border: none;
   margin: 1% auto;
-  background-color: white;
+  background-color: #ffffff;
   color: #353e41;
   font-size: 0.75em;
   text-transform: uppercase;
@@ -150,7 +150,7 @@ input:focus {
 
 .btn:hover{
   background-color: #353e41;
-  color: white;
+  color: #ffffff;
 }
 
 .review p {
@@ -168,14 +168,14 @@ input:focus {
   max-width: 50%;
 }
 
-#edit_review {
+#edit-review {
   clear: both;
 }
 
 .voting {
-  max-width: 25%;
   margin: auto;
   margin-bottom: 7%;
+  max-width: 25%;
 
 }
 
@@ -187,12 +187,13 @@ input:focus {
   list-style-type:none;
   text-align: right;
 }
-.wrapper .users_list .user {
+
+.wrapper .users-list .user {
   list-style-type: none;
 
 }
 
-.users_list {
+.users-list {
   margin: auto;
   max-width: 40%;
 }
@@ -203,12 +204,12 @@ input:focus {
 }
 
 nav .back-button {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   padding: 0.5em;
   transition: background-color 0.25s ease;
   vertical-align: middle;
-  display:inline-block;
+  display: inline-block;
   margin-left: 2%;
 }
 

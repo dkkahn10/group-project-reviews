@@ -1,20 +1,20 @@
 
 <div id='landing_div'>
+  <h1 id ='date_spots'> Date Spots </h1>
+  <%= form_tag(locations_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Plan your next date", class: 'search-input' %>
+  <br/>
+  <%= submit_tag "Search", class: 'submit' %>
+  <% end %>
 </div>
 
-<div id = 'datespot_container'>
-  <h1 id ='date_spots'> Date Spots </h1>
-  <div id="search form">
-    <%= form_tag(locations_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Plan your next date" %>
-    <br/>
-    <%= submit_tag "Search" %>
-    <% end %>
-  </div>
 
-<h1> All Locations </h1>
+<div id = "visited-locations">
+<h2> Our Users Have Visted </h2>
 <% @locations.each do |location| %>
   <%= link_to location.name_of_location, location_path(location) %> <br>
 <% end %>
 
-<%= link_to "Add New Location", new_location_path %>
+<%= link_to "Add a new date spot", new_location_path %>
+
+</div>

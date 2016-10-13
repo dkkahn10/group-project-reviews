@@ -28,13 +28,13 @@ feature 'profile picture' do
       fill_in 'Email', with: user.email
       fill_in 'Password', with: user.password
       click_button 'Log in'
-      click_link 'Your Profile'
-      attach_file 'user_profile_picture', "#{Rails.root}/spec/support/images/photo.png"
-
+      click_link 'Edit Your Profile'
+      fill_in 'Current password', with: user.password
+      attach_file 'user_profile_picture', "#{Rails.root}/spec/support/images/sample_bird.jpeg"
       click_button 'Update'
 
       expect(page).to have_xpath(
-        "//img[contains(@src,'/images/default_profile_picture.png')]"
+        "//img[contains(@src,'sample_bird.jpeg')]"
       )
     end
 

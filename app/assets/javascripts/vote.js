@@ -19,7 +19,7 @@ $(document).ready(function() {
     event.preventDefault();
     var url = this.parentElement.action;
     var currentTarget = $(event.currentTarget);
-    var id = this.id;
+    var id = parseInt(this.id);
     var request = $.ajax({
       url: `${url}.json`,
       method: "POST",

@@ -1,7 +1,12 @@
 # frozen_string_literal: true
 class UsersController < ApplicationController
+  def index
+    @users = User.all
+  end
 
-  def delete
-    sign_out_and_redirect(current_user)
+  private
+
+  def authorized_user?
+    current_user.try(:admin?) || current_user == @user
   end
 end

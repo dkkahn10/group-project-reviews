@@ -111,7 +111,7 @@ input:focus {
 }
 
 #replacing_content{
-  display:none;
+  display: none;
 }
 
 .wrapper {
@@ -159,12 +159,12 @@ input:focus {
 }
 
 .thumbs-up-button, {
-  float:left;
+  float: left;
   max-width: 50%;
 }
 
 .thumbs-down-button {
-  float:right;
+  float: right;
   max-width: 50%;
 }
 
@@ -184,7 +184,7 @@ input:focus {
 }
 
 .wrapper .delete_user {
-  list-style-type:none;
+  list-style-type: none;
   text-align: right;
 }
 
@@ -205,12 +205,12 @@ input:focus {
 
 nav .back-button {
   color: #ffffff;
+  display: inline-block;
+  margin-left: 2%;
   text-decoration: none;
   padding: 0.5em;
   transition: background-color 0.25s ease;
   vertical-align: middle;
-  display: inline-block;
-  margin-left: 2%;
 }
 
 nav .back-button:hover {

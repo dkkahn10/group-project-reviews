@@ -13,13 +13,13 @@ feature 'user edits their review' do
     login_as(user)
     visit location_path(location)
 
-    expect(page).to have_button('Edit Review')
+    expect(page).to have_link('Edit Review')
   end
 
   scenario 'a user cannot edit another user\'s review' do
     login_as(user_2)
     visit location_path(location)
 
-    expect(page).to_not have_button('Edit Review')
+    expect(page).to_not have_link('Edit Review')
   end
 end

@@ -2,9 +2,16 @@
 Rails.application.routes.draw do
   root "locations#index"
 
+  resources :users, only: [:index]
   resources :locations do
-    resources :reviews, except: [:show]
+    resources :reviews, except: [:show, :index]
   end
 
-  devise_for :users
+  resources :reviews do
+    member do
+      post 'upvote', 'downvote'
+    end
+  end
+
+  devise_for :users, controllers: { registrations: 'users/registrations' }
 end

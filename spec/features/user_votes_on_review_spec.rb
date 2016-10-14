@@ -51,7 +51,7 @@ feature 'a user can upvote or downvote a review' do
       login_as(user)
       visit location_path(location)
       click_button 'Thumbs Down'
-      vote = Vote.create(user_id: user.id, review_id: review.id, vote_value: false)
+      Vote.create(user_id: user.id, review_id: review.id, vote_value: false)
 
       expect(review.tally).to eq(-1)
 

@@ -1,7 +1,8 @@
 <div class= 'wrapper'>
-  <h1> <%= @location.name_of_location %> </h1>
-    <p><%= @location.description %><p>
-
+  <div class ='location-info'>
+    <h1> <%= @location.name_of_location %> </h1>
+      <p><%= @location.description %><p>
+  </div>
 
   <div class="button">
     <%= link_to "Edit Location", edit_location_path(@location), class: 'btn'%>
@@ -10,12 +11,16 @@
   <div class ="reviews">
       <h2>Reviews</h2>
       <% @reviews.each do |review| %>
-      <div class="single_review">
-        <p>Rating: <%= review.intimacy_rating %></p>
-        <p><%= review.reasoning %></p>
-      </div>
+      <div class="single-review">
+        <p class='username'>Review from <%= review.user.username %></p>
+        <p class ='rating'>Rating: <%= review.intimacy_rating %></p>
+        <p class = 'reasoning'>Reason: <%= review.reasoning %></p>
+        <div>
+          <% if review.user == current_user || current_user.try(:admin?) %>
+          <%= link_to "Edit Review", edit_location_review_path(@location, review), class: 'btn', id:'edit-review' %>
+          <% end %>
+        </div>
         <div class="total-votes-entire">
-          <h4>Vote Score:</h4>
           <div id="total<%= review.id %>"> <%= review.tally %> </div>
         </div>
 
@@ -27,15 +32,14 @@
             <button type="button" name="button" onClick="clickDownvote()" id="<%= review.id %>">Thumbs Down</button>
           </div>
         </div>
+      </div>
 
-        <div>
-          <% if review.user == current_user || current_user.try(:admin?) %>
-            <%= link_to "Edit Review", edit_location_review_path(@location, review), class: 'btn', id:'edit-review' %>
-          <% end %>
-        </div>
       <% end %>
       <div class="button">
         <%= link_to "Add a Review", new_location_review_path(@location), class: 'btn'%>
+      </div>
+      <div class='back'>
+        <%= link_to "← Back", :back, class:'back_button' %>
       </div>
     </div>
 </div>

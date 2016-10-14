@@ -12,7 +12,7 @@ feature 'admin can see a list of all of the site\'s users' do
     visit root_path
     click_link 'Admin Features'
 
-    expect(page).to have_content('User Index Page')
+    expect(page).to have_content('Users')
     expect(page).to have_content user_1.username
     expect(page).to have_content user_2.username
     expect(page).to have_content user_3.username

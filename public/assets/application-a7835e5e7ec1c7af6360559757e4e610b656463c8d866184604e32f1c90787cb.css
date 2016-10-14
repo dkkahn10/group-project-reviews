@@ -128,7 +128,7 @@ input:focus {
 }
 
 /* line 113, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
-#replacing_content {
+#replacing-content {
   display: none;
 }
 
@@ -159,14 +159,14 @@ input:focus {
 }
 
 /* line 141, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
-#replacing_content .locations a {
+#replacing-content .locations a {
   text-decoration: none;
   color: #353e41;
   line-height: 25px;
 }
 
 /* line 147, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
-#replacing_content .locations a:hover {
+#replacing-content .locations a:hover {
   text-decoration: underline;
 }
 

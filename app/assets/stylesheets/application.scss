@@ -138,15 +138,24 @@ input:focus {
   font-family: sans-serif;;
 }
 
-#replacing_content .locations a{
+a{
   text-decoration: none;
   color: #353e41;
   line-height: 25px;
 }
 
-#replacing_content .locations a:hover {
+a:hover:not(.btn){
   text-decoration: underline;
 }
+// #replacing_content .locations a{
+//   text-decoration: none;
+//   color: #353e41;
+//   line-height: 25px;
+// }
+//
+// #replacing_content .locations a:hover {
+//   text-decoration: underline;
+// }
 
 .btn:hover{
   background-color: #353e41;
@@ -203,16 +212,39 @@ input:focus {
   text-align: center;
 }
 
-nav .back-button {
+.back-button {
   color: #ffffff;
   display: inline-block;
-  margin-left: 2%;
   text-decoration: none;
   padding: 0.5em;
   transition: background-color 0.25s ease;
-  vertical-align: middle;
+  text-align: left
 }
 
-nav .back-button:hover {
+.back-button:hover {
   color: #353e41;
+}
+
+.back {
+  width: 10%;
+}
+
+.edit_user_form .field {
+  margin-bottom: 1%;
+}
+
+.single_review {
+  max-width: 75%;
+  margin: 2% auto;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  padding: 10px;
+
+}
+.single_review .username {
+  font-weight: bold;
+  text-align: left;
+}
+
+.single_review .rating, .reasoning {
+  font-size: 1em;
 }

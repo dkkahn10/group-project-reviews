@@ -11,8 +11,8 @@
 
   <body>
     <nav>
-        <%= link_to "Back", :back, class:'back_button' %>
       <ul>
+        <li><%= link_to 'Home', locations_path %></li>
         <% if user_signed_in? %>
           <% if !current_user.profile_picture.nil? %>
             <%= image_tag(current_user.profile_picture.small_profile_picture) %>

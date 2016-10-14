@@ -23926,37 +23926,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   App.cable = ActionCable.createConsumer();
 
 }).call(this);
-$(document).ready(function() {
-
-  $('.thumbs-up-button').on('click', function(event) {
-    event.preventDefault();
-    let url = this.parentElement.action;
-    let currentTarget = $(event.currentTarget);
-    let id = parseInt(this.id);
-    let request = $.ajax({
-      url: `${url}.json`,
-      method: "POST",
-    });
-    request.done(function(data) {
-      document.getElementById(`total${id}`).innerHTML = data.vote;
-    });
+function clickUpvote () {
+  event.preventDefault();
+  let id = event.currentTarget.id;
+  let request = $.ajax({
+    url: `/reviews/${id}/upvote.json`,
+    method: "POST",
+    error: function() {
+      alert('You need to sign in or sign up before continuing')
+    }
   });
-
-  $('.thumbs-down-button').on('click', function(event) {
-    event.preventDefault();
-    let url = this.parentElement.action;
-    let currentTarget = $(event.currentTarget);
-    let id = parseInt(this.id);
-    let request = $.ajax({
-      url: `${url}.json`,
-      method: "POST",
-    });
-    request.done(function(data) {
-      document.getElementById(`total${id}`).innerHTML = data.vote;
-    });
+  request.done(function(data) {
+    document.getElementById(`total${id}`).innerHTML = data.vote;
   });
+};
 
-});
+
+function clickDownvote() {
+  event.preventDefault();
+  let id = event.currentTarget.id;
+  let request = $.ajax({
+    url: `/reviews/${id}/downvote.json`,
+    method: "POST",
+    error: function() {
+      alert('You need to sign in or sign up before continuing')
+    }
+  });
+  request.done(function(data) {
+    document.getElementById(`total${id}`).innerHTML = data.vote;
+  });
+};
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -23973,14 +23972,4 @@ $(document).ready(function() {
 
 
 
-
-$(document).ready(function() {
-  console.log(window.location.search);
-  var a = window.location.search;
-  if (a === ""){
-    $("#replacing-content").hide();
-  } else {
-    $("#replacing-content").show();
-
-  }
-});
+;

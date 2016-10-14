@@ -128,11 +128,6 @@ input:focus {
 }
 
 /* line 113, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
-#replacing-content {
-  display: none;
-}
-
-/* line 117, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .wrapper {
   background-color: rgba(255, 255, 255, 0.75);
   margin: 10% auto;
@@ -141,7 +136,7 @@ input:focus {
   text-align: center;
 }
 
-/* line 125, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 121, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .btn {
   width: 15%;
   border: none;
@@ -158,83 +153,83 @@ input:focus {
   font-family: sans-serif;
 }
 
-/* line 141, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 137, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 a {
   text-decoration: none;
   color: #353e41;
   line-height: 25px;
 }
 
-/* line 147, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 143, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 a:hover:not(.btn) {
   text-decoration: underline;
 }
 
-/* line 151, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 147, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .btn:hover {
   background-color: #353e41;
   color: #ffffff;
 }
 
-/* line 156, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 152, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .review p {
   color: #353e41;
   font-size: 100px;
 }
 
-/* line 161, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 157, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .thumbs-up-button {
   float: left;
   max-width: 50%;
 }
 
-/* line 166, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 162, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .thumbs-down-button {
   float: right;
   max-width: 50%;
 }
 
-/* line 171, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 167, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 #edit-review {
   clear: both;
 }
 
-/* line 175, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 171, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .voting {
   margin: auto;
   margin-bottom: 7%;
   max-width: 25%;
 }
 
-/* line 182, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 178, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .wrapper .user {
   text-align: left;
 }
 
-/* line 186, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 182, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .wrapper .delete_user {
   list-style-type: none;
   text-align: right;
 }
 
-/* line 191, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 187, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .wrapper .users-list .user {
   list-style-type: none;
 }
 
-/* line 196, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 192, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .users-list {
   margin: auto;
   max-width: 40%;
 }
 
-/* line 201, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 197, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .profpic {
   margin: auto;
   text-align: center;
 }
 
-/* line 206, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 202, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .back-button {
   color: #ffffff;
   display: inline-block;
@@ -244,22 +239,22 @@ a:hover:not(.btn) {
   text-align: left;
 }
 
-/* line 215, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 211, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .back-button:hover {
   color: #353e41;
 }
 
-/* line 219, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 215, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .back {
   width: 10%;
 }
 
-/* line 223, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 219, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .edit-user-form .field {
   margin-bottom: 1%;
 }
 
-/* line 227, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 223, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .single-review {
   border: 1px solid rgba(0, 0, 0, 0.4);
   margin: 2% auto;
@@ -267,26 +262,26 @@ a:hover:not(.btn) {
   padding: 10px;
 }
 
-/* line 234, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 230, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .single-review .username {
   font-weight: bold;
   text-align: left;
 }
 
-/* line 239, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 235, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .single-review .rating,
 .reasoning {
   font-size: 1em;
 }
 
-/* line 244, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 240, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .location-info {
   max-width: 75%;
   text-align: justify;
   margin: auto;
 }
 
-/* line 250, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+/* line 246, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
 .location-info h1 {
   text-align: center;
 }

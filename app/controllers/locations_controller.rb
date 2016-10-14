@@ -1,5 +1,6 @@
 class LocationsController < ApplicationController
   def index
+    @class_name = params[:search] ? '' : 'hide'
     @locations = if params[:search]
                    Location.search(params[:search])
                  else

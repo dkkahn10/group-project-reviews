@@ -21114,4 +21114,14 @@ $(document).ready(function() {
 
 
 
-;
+
+$(document).ready(function() {
+  console.log(window.location.search);
+  var a = window.location.search;
+  if (a === ""){
+    $("#replacing-content").hide();
+  } else {
+    $("#replacing-content").show();
+
+  }
+});

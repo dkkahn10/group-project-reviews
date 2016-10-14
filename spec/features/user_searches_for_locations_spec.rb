@@ -5,7 +5,7 @@ feature 'a user can search for locations' do
 
   scenario 'a user searches for a location name and is given results' do
     visit root_path
-    fill_in 'Search Locations', with: location.name_of_location
+    fill_in 'Plan your next date', with: location.name_of_location
     click_button 'Search'
 
     expect(page).to have_link location.name_of_location
@@ -13,7 +13,7 @@ feature 'a user can search for locations' do
 
   scenario 'a user searches for a location description and is given results' do
     visit root_path
-    fill_in 'Search Locations', with: location.description
+    fill_in 'Plan your next date', with: location.description
     click_button 'Search'
 
     expect(page).to have_link location.name_of_location

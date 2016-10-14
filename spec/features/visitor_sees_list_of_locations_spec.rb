@@ -9,7 +9,7 @@ feature 'visitor sees a list of locations' do
 
     expect(page).to have_content location.name_of_location
     expect(page).to have_link location_2.name_of_location
-    expect(page).to have_content('Add New Location')
+    expect(page).to have_content('Add a new spot')
   end
 
   scenario 'clicks link and is taken to show page for given location' do

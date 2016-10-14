@@ -1,0 +1,251 @@
+/* line 1, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* line 5, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+body {
+  background-image: url("http://wp.streetwise.co/wp-content/uploads//2014/05/6-Active-Date-Ideas-To-Do-In-Boston-.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+/* line 12, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+h1, h2 {
+  margin: auto;
+  color: #353e41;
+  text-transform: uppercase;
+  padding-bottom: 0.5em;
+}
+
+/* line 19, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+h1 {
+  font-size: 48px;
+}
+
+/* line 23, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+h2 {
+  margin: 2em auto 0.5em;
+}
+
+/* line 27, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+p {
+  font-size: 1.5em;
+  color: #353e41;
+  padding-bottom: 1%;
+}
+
+/* line 33, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+nav {
+  background-color: rgba(53, 62, 65, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* line 40, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+nav ul li {
+  display: inline-block;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+/* line 46, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0.5em;
+  transition: background-color 0.25s ease;
+  vertical-align: middle;
+}
+
+/* line 54, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+nav img {
+  vertical-align: middle;
+}
+
+/* line 59, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+nav ul li a:hover {
+  color: #353e41;
+}
+
+/* line 63, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+nav ul {
+  text-align: right;
+  margin-right: 1em;
+  padding: 1em 0;
+}
+
+/* line 69, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+#landing_div {
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 20% auto 0;
+  padding: 10%;
+  max-width: 50%;
+  text-align: center;
+  position: relative;
+}
+
+/* line 79, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+#landing_div #search-form {
+  margin: auto;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
+/* line 85, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+input {
+  width: 40%;
+  height: 2.5em;
+  border: none;
+  padding: 0.5em;
+}
+
+/* line 92, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+input:focus {
+  outline: none;
+  border-bottom: 2px solid #353e41;
+}
+
+/* line 97, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.submit {
+  width: 20%;
+  border: none;
+  margin-top: 1em;
+  background-color: #ffffff;
+  color: #353e41;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease;
+}
+
+/* line 108, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.submit:hover {
+  background-color: #353e41;
+  color: #ffffff;
+}
+
+/* line 113, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+#replacing-content {
+  display: none;
+}
+
+/* line 117, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.75);
+  margin: 10% auto;
+  max-width: 75%;
+  padding: 2%;
+  text-align: center;
+}
+
+/* line 125, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.btn {
+  width: 15%;
+  border: none;
+  margin: 1% auto;
+  background-color: #ffffff;
+  color: #353e41;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  transition: background-color 0.25s ease;
+  text-decoration: none;
+  font-size: 0.75em;
+  padding: 1% 0;
+  display: block;
+  font-family: sans-serif;
+}
+
+/* line 141, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+#replacing-content .locations a {
+  text-decoration: none;
+  color: #353e41;
+  line-height: 25px;
+}
+
+/* line 147, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+#replacing-content .locations a:hover {
+  text-decoration: underline;
+}
+
+/* line 151, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.btn:hover {
+  background-color: #353e41;
+  color: #ffffff;
+}
+
+/* line 156, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.review p {
+  color: #353e41;
+  font-size: 100px;
+}
+
+/* line 161, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.thumbs-up-button {
+  float: left;
+  max-width: 50%;
+}
+
+/* line 166, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.thumbs-down-button {
+  float: right;
+  max-width: 50%;
+}
+
+/* line 171, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+#edit-review {
+  clear: both;
+}
+
+/* line 175, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.voting {
+  margin: auto;
+  margin-bottom: 7%;
+  max-width: 25%;
+}
+
+/* line 182, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.wrapper .user {
+  text-align: left;
+}
+
+/* line 186, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.wrapper .delete_user {
+  list-style-type: none;
+  text-align: right;
+}
+
+/* line 191, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.wrapper .users-list .user {
+  list-style-type: none;
+}
+
+/* line 196, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.users-list {
+  margin: auto;
+  max-width: 40%;
+}
+
+/* line 201, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+.profpic {
+  margin: auto;
+  text-align: center;
+}
+
+/* line 206, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+nav .back-button {
+  color: #ffffff;
+  display: inline-block;
+  margin-left: 2%;
+  text-decoration: none;
+  padding: 0.5em;
+  transition: background-color 0.25s ease;
+  vertical-align: middle;
+}
+
+/* line 216, /Users/DustinMac/challenges/group-project-reviews/app/assets/stylesheets/application.scss */
+nav .back-button:hover {
+  color: #353e41;
+}

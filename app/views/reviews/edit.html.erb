@@ -1,20 +1,23 @@
-<h1> Review Edit Form </h1>
-<%= form_for [@location, @review] do |f| %>
-<div class="field" id="rating" value="#{@review.intimacy_rating}">
-  <%= f.label :intimacy_rating, "Intimacy Rating" %>
-  <%= f.number_field :intimacy_rating %>
-</div>
-<div class="field" id="reasoning" value="#{@review.reasoning}">
-  <%= f.label :reasoning %>
-  <%= f.text_field :reasoning %>
-</div>
-<div class="action">
-  <%= f.submit "Edit" %>
-</div>
+<div class ="wrapper">
+  <h1> Edit Your Review</h1>
+  <%= form_for [@location, @review] do |f| %>
+  <div class="field" id="rating" value="#{@review.intimacy_rating}">
+    <%= f.label :intimacy_rating, "Intimacy Rating" %></br>
+    <%= f.number_field :intimacy_rating %>
+  </div>
+  </br>
+  <div class="field" id="reasoning" value="#{@review.reasoning}">
+    <%= f.label :reasoning %></br>
+    <%= f.text_field :reasoning %>
+  </div>
+  <div class="action">
+    <%= f.submit "Edit", class: 'btn' %>
+  </div>
 
-<% end %>
+  <% end %>
 
-<br>
-<h4>
-  <%= link_to "Delete", [@location, @review], method: :delete, data: { confirm: "You sure?" } %>
-</h4>
+  <br>
+  <h4>
+    <%= link_to "Delete", [@location, @review], method: :delete, data: { confirm: "You sure?" }, class: 'btn' %>
+  </h4>
+</div>

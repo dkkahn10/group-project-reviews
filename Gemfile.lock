@@ -220,6 +220,8 @@ GEM
     fog-xml (0.1.2)
       fog-core
       nokogiri (~> 1.5, >= 1.5.11)
+    font-awesome-rails (4.6.3.1)
+      railties (>= 3.2, < 5.1)
     formatador (0.2.5)
     foundation-rails (6.2.3.0)
       railties (>= 3.1.0)
@@ -403,6 +405,7 @@ DEPENDENCIES
   email_spec
   factory_girl_rails
   fog
+  font-awesome-rails
   foundation-rails
   jquery-rails
   launchy

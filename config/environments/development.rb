@@ -12,7 +12,7 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: "localhost",
-    port: 1025,
+    port: 1025
   }
   # Do not eager load code on boot.
   config.eager_load = false

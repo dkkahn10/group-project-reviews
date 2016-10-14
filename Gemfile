@@ -16,6 +16,7 @@ gem 'fog'
 gem 'mini_magick'
 gem 'dotenv-rails'
 gem 'sendgrid-ruby'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'capybara'

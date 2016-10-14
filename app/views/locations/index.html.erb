@@ -1,11 +1,26 @@
-<%= form_tag(locations_path, :method => "get", id: "search-form") do %>
-<%= text_field_tag :search, params[:search], placeholder: "Search Locations" %>
-<%= submit_tag "Search" %>
-<% end %>
 
-<h1> All Locations </h1>
-<% @locations.each do |location| %>
-  <%= link_to location.name_of_location, location_path(location) %> <br>
-<% end %>
+<div id='landing_div'>
+  <div id='landing_content'>
+    <h1 id ='date_spots'> Date Spots </h1>
+  </div>
 
-<%= link_to "Add New Location", new_location_path %>
+  <div class="search-form">
+    <%= form_tag(locations_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Plan your next date", class: 'search-input' %>
+    <br/>
+    <%= submit_tag "Search", class: 'submit', id: 'see_locations' %>
+    <% end %>
+  </div>
+
+    <div id='replacing-content' class='<%= @class_name %>'>
+      <div class ='locations'>
+        <h2> Our Users Have Visited </h2>
+        <% @locations.each do |location| %>
+        <%= link_to location.name_of_location, location_path(location) %> <br>
+        <% end %>
+      </div>
+      <%= link_to "Add a new spot", new_location_path, class:'btn' %>
+    </div>
+
+
+</div>

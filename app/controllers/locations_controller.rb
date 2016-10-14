@@ -45,8 +45,9 @@ class LocationsController < ApplicationController
   end
 
   def destroy
+    @location = Location.find(params[:id])
     if @location.user == current_user || current_user.admin?
-      Location.find(params[:id]).destroy
+      @location.destroy
       flash[:notice] = "Location was deleted"
       redirect_to locations_path
     end

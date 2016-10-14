@@ -26,10 +26,10 @@
 
         <div class="voting">
           <div>
-            <%= button_to "Thumbs Up", upvote_review_path(review.id), class: 'thumbs-up-button', id: "#{review.id}", remote: true, method: :post %>
+            <button type="button" name="button" onClick="clickUpvote()" id="<%= review.id %>">Thumbs Up</button>
           </div>
           <div>
-            <%= button_to "Thumbs Down", downvote_review_path(review.id), class: 'thumbs-down-button', id: "#{review.id}", remote: true, method: :post %>
+            <button type="button" name="button" onClick="clickDownvote()" id="<%= review.id %>">Thumbs Down</button>
           </div>
         </div>
       </div>

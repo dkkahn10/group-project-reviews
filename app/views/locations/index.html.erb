@@ -4,6 +4,7 @@
     <h1 id ='date_spots'> Date Spots </h1>
   </div>
 
+
   <div class="search-form">
     <%= form_tag(locations_path, :method => "get", id: "search-form") do %>
     <%= text_field_tag :search, params[:search], placeholder: "Plan your next date", class: 'search-input' %>
@@ -15,12 +16,19 @@
     <div id='replacing-content' class='<%= @class_name %>'>
       <div class ='locations'>
         <h2> Our Users Have Visited </h2>
-        <% @locations.each do |location| %>
-        <%= link_to location.name_of_location, location_path(location) %> <br>
+        <% if !@search.nil? %>
+          <% @locations.each do |location| %>
+            <%= link_to location.name_of_location, location_path(location) %> <br>
+          <% end %>
+        <% else %>
+          <div class="live-update" id="react-update">
+            <% @locations.each do |location| %>
+              <%= link_to location.name_of_location, location_path(location) %> <br>
+            <% end %>
+          </div>
         <% end %>
       </div>
       <%= link_to "Add a new spot", new_location_path, class:'btn' %>
     </div>
-
 
 </div>

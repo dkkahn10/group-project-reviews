@@ -1,11 +1,17 @@
 class LocationsController < ApplicationController
   def index
-    @class_name = params[:search] ? '' : 'hide'
-    @locations = if params[:search]
-                   Location.search(params[:search])
-                 else
-                   Location.all
-                 end
+    if !params[:search].nil?
+       @search = Location.search(params[:search])
+       @locations = @search
+     else
+       @search = nil
+       @locations = Location.all
+     end
+
+     respond_to do |format|
+       format.html
+       format.json { render json: { locations: Location.all } }
+     end
   end
 
   def new

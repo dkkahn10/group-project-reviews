@@ -19,7 +19,7 @@ feature 'admin can delete other users\' locations' do
     click_link 'Delete'
 
     expect(page).to have_content('Location was deleted')
-    expect(page).to have_content('All Locations')
+    expect(page).to have_content('Our Users Have Visited')
     expect(page).to_not have_content location.name_of_location
   end
 end

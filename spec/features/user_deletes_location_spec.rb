@@ -14,7 +14,7 @@ feature "user can delete a location" do
         click_link "Delete"
 
         expect(page).to_not have_content "The Temple of Time"
-        expect(page).to have_content "All Locations"
+        expect(page).to have_content "Our Users Have Visited"
         expect(page).to have_content "Location was deleted"
       end
     end

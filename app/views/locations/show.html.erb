@@ -1,7 +1,8 @@
 <div class= 'wrapper'>
-  <h1> <%= @location.name_of_location %> </h1>
-    <p><%= @location.description %><p>
-
+  <div class ='location-info'>
+    <h1> <%= @location.name_of_location %> </h1>
+      <p><%= @location.description %><p>
+  </div>
 
   <div class="button">
     <%= link_to "Edit Location", edit_location_path(@location), class: 'btn'%>
@@ -13,7 +14,7 @@
       <div class="single-review">
         <p class='username'>Review from <%= review.user.username %></p>
         <p class ='rating'>Rating: <%= review.intimacy_rating %></p>
-        <p class = 'reasoning'>Reason:<%= review.reasoning %></p>
+        <p class = 'reasoning'>Reason: <%= review.reasoning %></p>
         <div>
           <% if review.user == current_user || current_user.try(:admin?) %>
           <%= link_to "Edit Review", edit_location_review_path(@location, review), class: 'btn', id:'edit-review' %>

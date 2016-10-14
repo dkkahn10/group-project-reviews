@@ -24,3 +24,7 @@
 
 # Ignore uploaded files in test/development
 /public/uploads
+
+# Ignore application configuration
+/config/application.yml
+sendgrid.env

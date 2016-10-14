@@ -5,5 +5,6 @@ FactoryGirl.define do
   factory :location do
     sequence(:name_of_location) { |n| "thisplace#{n}" }
     sequence(:description) { |n| "This is a great description#{n}" }
+    user
   end
 end

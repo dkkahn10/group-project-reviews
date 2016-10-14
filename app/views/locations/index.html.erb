@@ -21,7 +21,11 @@
             <%= link_to location.name_of_location, location_path(location) %> <br>
           <% end %>
         <% else %>
-          <div class="live-update" id="react-update"></div>
+          <div class="live-update" id="react-update">
+            <% @locations.each do |location| %>
+              <%= link_to location.name_of_location, location_path(location) %> <br>
+            <% end %>
+          </div>
         <% end %>
       </div>
       <%= link_to "Add a new spot", new_location_path, class:'btn' %>

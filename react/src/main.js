@@ -4,8 +4,10 @@ import ReactDOM from 'react-dom';
 import App from './components/App.js';
 
 $(function() {
-  ReactDOM.render(
-    <App/>,
-    document.getElementById('react-update')
-  );
+  if (document.getElementById('react-update') !== null) {
+    ReactDOM.render(
+      <App/>,
+      document.getElementById('react-update')
+    );
+  }
 });

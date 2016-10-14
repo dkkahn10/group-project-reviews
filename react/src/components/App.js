@@ -33,15 +33,15 @@ class App extends Component {
       locations = this.state.locations.map(location => {
         let locations_url = `/locations/${location.id}`
         return(
-          <li key={location.id}>
+          <div key={location.id}>
             <a href={locations_url}>{location.name_of_location}</a>
-          </li>
+          </div>
         )
       })
     }
 
     return(
-      <ul> {locations} </ul>
+      <div> {locations} </div>
     );
   }
 }

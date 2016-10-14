@@ -14,14 +14,3 @@
 //= require jquery_ujs
 //= require foundation
 //= require_tree .
-
-$(document).ready(function() {
-  console.log(window.location.search);
-  var a = window.location.search;
-  if (a === ""){
-    $("#replacing_content").hide();
-  } else {
-    $("#replacing_content").show();
-
-  }
-});

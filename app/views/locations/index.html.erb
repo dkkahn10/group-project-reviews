@@ -16,11 +16,13 @@
     <div id='replacing_content' class='<%= @class_name %>'>
       <div class ='locations'>
         <h2> Our Users Have Visited </h2>
-        <div class="live-update" id="react-update">
+        <% if !@search.nil? %>
           <% @locations.each do |location| %>
             <%= link_to location.name_of_location, location_path(location) %> <br>
           <% end %>
-        </div>
+        <% else %>
+          <div class="live-update" id="react-update"></div>
+        <% end %>
       </div>
       <%= link_to "Add a new spot", new_location_path, class:'btn' %>
     </div>

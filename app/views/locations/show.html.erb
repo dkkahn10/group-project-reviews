@@ -19,7 +19,6 @@
           <%= link_to "Edit Review", edit_location_review_path(@location, review), class: 'btn', id:'edit-review' %>
           <% end %>
         </div>
-      </div>
         <div class="total-votes-entire">
           <div id="total<%= review.id %>"> <%= review.tally %> </div>
         </div>
@@ -32,6 +31,7 @@
             <%= button_to "Thumbs Down", downvote_review_path(review.id), class: 'thumbs-down-button', id: "#{review.id}", remote: true, method: :post %>
           </div>
         </div>
+      </div>
 
       <% end %>
       <div class="button">

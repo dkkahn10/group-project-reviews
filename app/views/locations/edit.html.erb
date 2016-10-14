@@ -2,11 +2,12 @@
   <h1>Location Edit Form</h1>
   <%= form_for(@location) do |f| %>
     <div class="field" id="name_of_location" value="#{@location.name_of_location}">
-      <%= f.label :name_of_location, "Name of Location" %>
+      <%= f.label :name_of_location, "Name of Location" %></br>
       <%= f.text_field :name_of_location %>
     </div>
+  </br>
     <div class="field" id="description" value="#{@location.description}">
-      <%= f.label :description %>
+      <%= f.label :description %></br>
       <%= f.text_field :description %>
     </div>
     <div class="action">
@@ -16,4 +17,7 @@
   <% end %>
 
   <br><h4><%= link_to "Delete", @location, method: :delete, data: { confirm: "You sure?" }, class: 'btn' %></h4>
+  <div class='back'>
+    <%= link_to "← Back", :back, class:'back_button' %>
+  </div>
 </div>

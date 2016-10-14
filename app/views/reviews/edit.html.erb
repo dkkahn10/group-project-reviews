@@ -2,11 +2,12 @@
   <h1> Edit Your Review</h1>
   <%= form_for [@location, @review] do |f| %>
   <div class="field" id="rating" value="#{@review.intimacy_rating}">
-    <%= f.label :intimacy_rating, "Intimacy Rating" %>
+    <%= f.label :intimacy_rating, "Intimacy Rating" %></br>
     <%= f.number_field :intimacy_rating %>
   </div>
+  </br>
   <div class="field" id="reasoning" value="#{@review.reasoning}">
-    <%= f.label :reasoning %>
+    <%= f.label :reasoning %></br>
     <%= f.text_field :reasoning %>
   </div>
   <div class="action">

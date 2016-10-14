@@ -21119,9 +21119,9 @@ $(document).ready(function() {
   console.log(window.location.search);
   var a = window.location.search;
   if (a === ""){
-    $("#replacing_content").hide();
+    $("#replacing-content").hide();
   } else {
-    $("#replacing_content").show();
+    $("#replacing-content").show();
 
   }
 });

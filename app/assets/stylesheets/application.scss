@@ -105,12 +105,12 @@ input:focus {
   transition: background-color 0.25s ease;
 }
 
-.submit:hover{
+.submit:hover {
   background-color: #353e41;
   color: #ffffff;
 }
 
-#replacing_content{
+#replacing-content {
   display: none;
 }
 
@@ -138,13 +138,13 @@ input:focus {
   font-family: sans-serif;;
 }
 
-#replacing_content .locations a{
+a {
   text-decoration: none;
   color: #353e41;
   line-height: 25px;
 }
 
-#replacing_content .locations a:hover {
+a:hover:not(.btn) {
   text-decoration: underline;
 }
 
@@ -203,16 +203,40 @@ input:focus {
   text-align: center;
 }
 
-nav .back-button {
+.back-button {
   color: #ffffff;
   display: inline-block;
-  margin-left: 2%;
   text-decoration: none;
   padding: 0.5em;
   transition: background-color 0.25s ease;
-  vertical-align: middle;
+  text-align: left;
 }
 
-nav .back-button:hover {
+.back-button:hover {
   color: #353e41;
+}
+
+.back {
+  width: 10%;
+}
+
+.edit-user-form .field {
+  margin-bottom: 1%;
+}
+
+.single-review {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  margin: 2% auto;
+  max-width: 75%;
+  padding: 10px;
+}
+
+.single-review .username {
+  font-weight: bold;
+  text-align: left;
+}
+
+.single-review .rating,
+.reasoning {
+  font-size: 1em;
 }

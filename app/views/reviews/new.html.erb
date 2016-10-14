@@ -2,15 +2,20 @@
   <h1> New Review Form for <%= @location.name_of_location %> </h1>
   <%= form_for [@location, @review] do |f| %>
     <div class="field">
-      <%= f.label :intimacy_rating, "Intimacy Rating" %>
+      <%= f.label :intimacy_rating, "Intimacy Rating" %></br>
       <%= f.number_field :intimacy_rating %>
     </div>
+    </br>
     <div class="field">
-      <%= f.label :reasoning %>
+      <%= f.label :reasoning %></br>
       <%= f.text_field :reasoning %>
     </div>
     <div class="action">
       <%= f.submit "Add Review", class: 'btn' %>
     </div>
   <% end %>
+
+  <div class='back'>
+    <%= link_to "← Back", :back, class:'back_button' %>
+  </div>
 </div>

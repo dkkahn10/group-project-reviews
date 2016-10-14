@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 class ApplicationMailer < ActionMailer::Base
-  default from: "\ "RateADate\" <from@example.com>"
+  default from: "\"RateADate\" <RateADateSpot@gmail.com>"
   layout 'mailer'
 end

@@ -15,6 +15,7 @@ gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
 gem 'fog'
 gem 'mini_magick'
 gem 'dotenv-rails'
+gem 'sendgrid-ruby'
 
 group :development, :test do
   gem 'capybara'
@@ -29,6 +30,7 @@ group :test do
   gem 'launchy', require: false
   gem 'coveralls', require: false
   gem 'database_cleaner'
+  gem 'email_spec'
 end
 
 group :production do

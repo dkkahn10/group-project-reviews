@@ -18,6 +18,7 @@ class LocationsController < ApplicationController
 
   def create
     @location = Location.new(location_params)
+    @location.user = current_user
     if @location.save
       flash[:notice] = "New Location successfully added"
       redirect_to location_path(@location)
@@ -44,9 +45,11 @@ class LocationsController < ApplicationController
   end
 
   def destroy
-    Location.find(params[:id]).destroy
-    flash[:notice] = "Location was deleted"
-    redirect_to locations_path
+    if @location.user == current_user || current_user.admin?
+      Location.find(params[:id]).destroy
+      flash[:notice] = "Location was deleted"
+      redirect_to locations_path
+    end
   end
 
   private

@@ -1,31 +1,30 @@
-$(document).ready(function() {
-
-  $('.thumbs-up-button').on('click', function(event) {
-    event.preventDefault();
-    let url = this.parentElement.action;
-    let currentTarget = $(event.currentTarget);
-    let id = parseInt(this.id);
-    let request = $.ajax({
-      url: `${url}.json`,
-      method: "POST",
-    });
-    request.done(function(data) {
-      document.getElementById(`total${id}`).innerHTML = data.vote;
-    });
+function clickUpvote () {
+  event.preventDefault();
+  let id = event.currentTarget.id;
+  let request = $.ajax({
+    url: `/reviews/${id}/upvote.json`,
+    method: "POST",
+    error: function() {
+      alert('You need to sign in or sign up before continuing')
+    }
   });
-
-  $('.thumbs-down-button').on('click', function(event) {
-    let url = this.parentElement.action;
-    event.preventDefault();
-    let currentTarget = $(event.currentTarget);
-    let id = parseInt(this.id);
-    let request = $.ajax({
-      url: `${url}.json`,
-      method: "POST",
-    });
-    request.done(function(data) {
-      document.getElementById(`total${id}`).innerHTML = data.vote;
-    });
+  request.done(function(data) {
+    document.getElementById(`total${id}`).innerHTML = data.vote;
   });
+};
 
-});
+
+function clickDownvote() {
+  event.preventDefault();
+  let id = event.currentTarget.id;
+  let request = $.ajax({
+    url: `/reviews/${id}/downvote.json`,
+    method: "POST",
+    error: function() {
+      alert('You need to sign in or sign up before continuing')
+    }
+  });
+  request.done(function(data) {
+    document.getElementById(`total${id}`).innerHTML = data.vote;
+  });
+};

@@ -105,12 +105,12 @@ input:focus {
   transition: background-color 0.25s ease;
 }
 
-.submit:hover{
+.submit:hover {
   background-color: #353e41;
   color: #ffffff;
 }
 
-#replacing_content{
+#replacing_content {
   display: none;
 }
 
@@ -138,24 +138,15 @@ input:focus {
   font-family: sans-serif;;
 }
 
-a{
+a {
   text-decoration: none;
   color: #353e41;
   line-height: 25px;
 }
 
-a:hover:not(.btn){
+a:hover:not(.btn) {
   text-decoration: underline;
 }
-// #replacing_content .locations a{
-//   text-decoration: none;
-//   color: #353e41;
-//   line-height: 25px;
-// }
-//
-// #replacing_content .locations a:hover {
-//   text-decoration: underline;
-// }
 
 .btn:hover{
   background-color: #353e41;
@@ -218,7 +209,7 @@ a:hover:not(.btn){
   text-decoration: none;
   padding: 0.5em;
   transition: background-color 0.25s ease;
-  text-align: left
+  text-align: left;
 }
 
 .back-button:hover {
@@ -229,22 +220,23 @@ a:hover:not(.btn){
   width: 10%;
 }
 
-.edit_user_form .field {
+.edit-user-form .field {
   margin-bottom: 1%;
 }
 
-.single_review {
-  max-width: 75%;
-  margin: 2% auto;
+.single-review {
   border: 1px solid rgba(0, 0, 0, 0.4);
+  margin: 2% auto;
+  max-width: 75%;
   padding: 10px;
-
 }
-.single_review .username {
+
+.single-review .username {
   font-weight: bold;
   text-align: left;
 }
 
-.single_review .rating, .reasoning {
+.single-review .rating,
+.reasoning {
   font-size: 1em;
 }

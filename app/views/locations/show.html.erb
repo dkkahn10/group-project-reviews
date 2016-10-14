@@ -10,7 +10,7 @@
   <div class ="reviews">
       <h2>Reviews</h2>
       <% @reviews.each do |review| %>
-      <div class="single_review">
+      <div class="single-review">
         <p class='username'>Review from <%= review.user.username %></p>
         <p class ='rating'>Rating: <%= review.intimacy_rating %></p>
         <p class = 'reasoning'>Reason:<%= review.reasoning %></p>
